@@ -61,7 +61,26 @@ export default function FeaturedCaseStudy() {
 
           {/* Body */}
           <div className="p-8">
-            <p className="text-slate-300 leading-relaxed mb-8 max-w-3xl">{caseStudy.summary}</p>
+            <p className="text-slate-300 leading-relaxed mb-4 max-w-3xl">{caseStudy.summary}</p>
+
+            {caseStudy.sectionsOwned && (
+              <div className="mb-8">
+                <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-2">
+                  Sections Owned
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {caseStudy.sectionsOwned.map(s => (
+                    <span
+                      key={s}
+                      className="text-xs font-mono px-2.5 py-1 rounded text-slate-300"
+                      style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.4)' }}
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
               {/* Challenge */}
@@ -82,7 +101,14 @@ export default function FeaturedCaseStudy() {
                 >
                   The Approach
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{caseStudy.approach}</p>
+                <ul className="space-y-1.5">
+                  {caseStudy.approach.map((item, i) => (
+                    <li key={i} className="flex gap-2 text-slate-400 text-sm leading-relaxed">
+                      <span className="text-indigo-400 shrink-0 mt-0.5">→</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
