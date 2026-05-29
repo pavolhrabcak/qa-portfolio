@@ -1,0 +1,58 @@
+import { useRef } from 'react'
+import { personalInfo } from '../data'
+import { useInView } from '../hooks/useInView'
+
+const tags = ['Manual Testing', 'Test Automation', 'API Testing', 'Desktop Testing', 'ISTQB Certified', 'Agile / Scrum']
+
+export default function About() {
+  const ref = useRef(null)
+  const visible = useInView(ref)
+
+  return (
+    <section id="about" className="py-28 px-6">
+      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+        <SectionHeader index="01" title="About Me" />
+
+        <div className="grid md:grid-cols-2 gap-14 items-start mt-12">
+          {/* Text side */}
+          <div>
+            <p className="text-slate-300 text-lg leading-relaxed mb-8">
+              {personalInfo.summary}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {tags.map(t => (
+                <span key={t}
+                  className="px-3 py-1 rounded-md text-sm font-mono text-emerald-300"
+                  style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Stats side */}
+          <div className="grid grid-cols-2 gap-4">
+            {personalInfo.stats.map((stat, i) => (
+              <div key={i} className="glass card-hover p-6 text-center rounded-xl">
+                <div className="text-4xl md:text-5xl font-extrabold gradient-text mb-2 leading-none">
+                  {stat.value}
+                </div>
+                <div className="text-slate-400 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export function SectionHeader({ index, title }) {
+  return (
+    <div className="flex items-center gap-4">
+      <span className="text-emerald-400 font-mono text-sm">{index}.</span>
+      <h2 className="text-3xl font-bold text-white">{title}</h2>
+      <div className="flex-1 h-px" style={{ background: 'rgba(51,65,85,0.8)' }} />
+    </div>
+  )
+}
