@@ -110,7 +110,7 @@ export default function Skills() {
         {/* ── Divider ── */}
         <div className="flex items-center gap-4 mb-10">
           <div className="flex-1 h-px" style={{ background: 'rgba(51,65,85,0.6)' }} />
-          <span className="text-xs font-mono text-slate-500 uppercase tracking-widest px-3">Technologies</span>
+          <span className="text-xs font-mono text-slate-500 uppercase tracking-widest px-3">Technologies & Tools</span>
           <div className="flex-1 h-px" style={{ background: 'rgba(51,65,85,0.6)' }} />
         </div>
 

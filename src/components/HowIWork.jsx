@@ -9,7 +9,7 @@ const STEPS = [
     title: 'Spec Review',
     description:
       'Analyze requirements and user stories, identify testable criteria, and surface ambiguities before a single test is written.',
-    tools: ['JIRA', 'Confluence', 'TestRail'],
+    tools: ['JIRA', 'Confluence', 'Azure DevOps'],
   },
   {
     number: '02',
@@ -17,7 +17,7 @@ const STEPS = [
     title: 'Test Design',
     description:
       'Define test scenarios covering happy paths, edge cases, negative flows, and boundary conditions. Build the test strategy.',
-    tools: ['TestRail', 'Zephyr', 'Mind Maps'],
+    tools: ['TestLink', 'JIRA'],
   },
   {
     number: '03',
@@ -25,7 +25,7 @@ const STEPS = [
     title: 'Execution',
     description:
       'Run manual and automated suites, log defects with full reproduction steps, screenshots, and environment details.',
-    tools: ['Playwright', 'Postman', 'JMeter'],
+    tools: ['Playwright', 'Cypress', 'Postman', 'JMeter'],
   },
   {
     number: '04',
@@ -33,7 +33,7 @@ const STEPS = [
     title: 'Reporting',
     description:
       'Generate coverage reports, defect trend analysis, and risk assessments to keep stakeholders clearly informed.',
-    tools: ['Allure', 'ExtentReports', 'JIRA'],
+    tools: ['Allure Report', 'Playwright HTML Report'],
   },
   {
     number: '05',
@@ -41,7 +41,7 @@ const STEPS = [
     title: 'Sign-off',
     description:
       'Final quality gate — release recommendation based on exit criteria, outstanding defects, and residual risk.',
-    tools: ['JIRA', 'TestRail', 'Confluence'],
+    tools: ['JIRA', 'Azure DevOps', 'Confluence'],
   },
 ]
 

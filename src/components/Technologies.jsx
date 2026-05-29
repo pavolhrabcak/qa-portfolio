@@ -10,7 +10,7 @@ export default function Technologies() {
   return (
     <section id="technologies" className="py-28 px-6">
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="04" title="Tech Stack" />
+        <SectionHeader index="04" title="Technologies & Tools" />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
           {technologies.map((cat) => (

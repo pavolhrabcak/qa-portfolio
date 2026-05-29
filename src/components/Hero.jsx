@@ -21,10 +21,10 @@ const EmailIcon = () => (
 )
 
 const METRICS = [
-  { value: 1247, display: '1,247', label: 'Bugs Reported',  color: '#f87171', delay: 200 },
-  { value: 94,   display: '94%',   label: 'Test Coverage',  color: '#10b981', delay: 350, bar: 94 },
-  { value: 312,  display: '312',   label: 'Test Cases',     color: '#818cf8', delay: 500 },
-  { value: 0,    display: '0',     label: 'P1 Bugs Open',   color: '#10b981', delay: 650 },
+  { value: 450, display: '450',  label: 'E2E Tests',      color: '#818cf8', delay: 200 },
+  { value: 98,  display: '98%',  label: 'Pass Rate',      color: '#10b981', delay: 350, bar: 98 },
+  { value: 4,   display: '4',    label: 'Roles Covered',  color: '#a78bfa', delay: 500 },
+  { value: 0,   display: '0',    label: 'P1 Bugs Open',   color: '#10b981', delay: 650 },
 ]
 
 function MetricCell({ display, label, color, bar, delay }) {
@@ -107,7 +107,7 @@ function MetricsWidget() {
             PASSED
           </span>
         </div>
-        <div className="text-slate-600 text-xs font-mono">312/312 tests · 0 failures · 2 min ago</div>
+        <div className="text-slate-600 text-xs font-mono">450/450 tests · 0 failures · 2 min ago</div>
       </div>
 
       {/* Activity sparkline (decorative) */}
