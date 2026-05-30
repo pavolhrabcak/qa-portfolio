@@ -23,7 +23,7 @@ export default function Training() {
   return (
     <section id="training" className="py-28 px-6">
       <div ref={ref} className={`max-w-3xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="05" title="Training & Certifications" />
+        <SectionHeader index="06" title="Training & Certifications" />
 
         <div className="relative mt-12 pl-8">
           {/* Vertical line */}

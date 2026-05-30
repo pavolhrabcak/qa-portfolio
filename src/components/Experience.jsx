@@ -142,7 +142,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-28 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="05" title="Experience" />
+        <SectionHeader index="04" title="Experience" />
 
         <div className="mt-12">
           <FeaturedCard exp={featured} visible={visible} />

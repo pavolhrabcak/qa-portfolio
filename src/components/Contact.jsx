@@ -81,7 +81,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-28 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-2xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="06" title="Get In Touch" />
+        <SectionHeader index="07" title="Get In Touch" />
 
         {/* Bug report frame */}
         <div

@@ -105,7 +105,7 @@ export default function PersonalProjects() {
   return (
     <section id="projects" className="py-28 px-6">
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="06" title="Personal Projects" />
+        <SectionHeader index="05" title="Personal Projects" />
         <p className="text-slate-400 mt-4 mb-12 max-w-2xl text-base leading-relaxed">
           Side projects built with AI-assisted development — combining the roles of product owner, developer, and QA.
         </p>
