@@ -131,7 +131,7 @@ export default function CVPage() {
           </Section>
 
           {/* Training */}
-          <Section title="Training & Courses">
+          <Section title="Trainings & Courses">
             <div className="grid grid-cols-2 gap-x-8 gap-y-1">
               {courses.map(c => (
                 <div key={c.title} className="flex items-baseline gap-2 text-sm">

@@ -7,7 +7,7 @@ const NAV = [
   { href: '#experience',   label: 'Experience' },
   { href: '#case-study',   label: 'Case Study' },
   { href: '#projects',     label: 'Projects' },
-  { href: '#training',     label: 'Training' },
+  { href: '#training',     label: 'Trainings' },
   { href: '#contact',      label: 'Contact' },
 ]
 
