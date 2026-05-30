@@ -104,19 +104,6 @@ export default function HowIWork() {
 
                 {/* Description */}
                 <p className="text-slate-400 text-xs leading-relaxed flex-1">{step.description}</p>
-
-                {/* Tool tags */}
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {step.tools.map(tool => (
-                    <span
-                      key={tool}
-                      className="text-xs font-mono px-2 py-0.5 rounded text-slate-400"
-                      style={{ background: 'rgba(51,65,85,0.5)', border: '1px solid rgba(71,85,105,0.4)' }}
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Arrow connector (between steps, not after last) */}

@@ -2,7 +2,24 @@ import { useRef } from 'react'
 import { personalInfo } from '../data'
 import { useInView } from '../hooks/useInView'
 
-const tags = ['Manual Testing', 'Test Automation', 'API Testing', 'Desktop Testing', 'ISTQB Certified', 'Agile / Scrum']
+const HIGHLIGHTS = [
+  'manual', 'automated testing', 'automation frameworks', 'automation',
+  'Playwright', 'end-to-end testing', 'AI-assisted workflows',
+]
+
+function HighlightedText({ text }) {
+  const pattern = new RegExp(`(${HIGHLIGHTS.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi')
+  const parts = text.split(pattern)
+  return (
+    <>
+      {parts.map((part, i) =>
+        HIGHLIGHTS.some(h => h.toLowerCase() === part.toLowerCase())
+          ? <span key={i} style={{ color: '#10b981' }}>{part}</span>
+          : <span key={i}>{part}</span>
+      )}
+    </>
+  )
+}
 
 export default function About() {
   const ref = useRef(null)
@@ -17,17 +34,8 @@ export default function About() {
           {/* Text side */}
           <div>
             <p className="text-slate-300 text-lg leading-relaxed mb-8">
-              {personalInfo.summary}
+              <HighlightedText text={personalInfo.summary} />
             </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {tags.map(t => (
-                <span key={t}
-                  className="px-3 py-1 rounded-md text-sm font-mono text-emerald-300"
-                  style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.25)' }}>
-                  {t}
-                </span>
-              ))}
-            </div>
 
             <div className="flex items-center gap-3">
               <span className="text-xs font-mono uppercase tracking-widest text-slate-500">Languages</span>

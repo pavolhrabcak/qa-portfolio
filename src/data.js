@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Pavol Hrabčák',
   title: 'QA Engineer',
-  subtitle: 'Web & Desktop Application Testing · Test Automation · Quality Advocate',
+  subtitle: 'QA Automation Engineer · Playwright · Test Strategy · AI-Assisted Workflows',
   email: 'pali.hrabcak@gmail.com',
   linkedin: 'linkedin.com/in/pavol-hrabcak-856388303',
   github: '',
@@ -51,9 +51,9 @@ export const skills = [
     emoji: '🌐',
     accent: { border: 'rgba(168,85,247,0.3)', glow: 'rgba(168,85,247,0.08)' },
     items: [
-      { name: 'REST API Testing',           level: 80 },
-      { name: 'Postman',                    level: 80 },
-      { name: 'JMeter',                     level: 62 },
+      { name: 'REST API Testing',           level: 70 },
+      { name: 'Postman',                    level: 70 },
+      { name: 'JMeter',                     level: 55 },
     ],
   },
   {
