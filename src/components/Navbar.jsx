@@ -6,6 +6,7 @@ const NAV = [
   { href: '#skills',       label: 'Skills & Stack' },
   { href: '#experience',   label: 'Experience' },
   { href: '#case-study',   label: 'Case Study' },
+  { href: '#projects',     label: 'Projects' },
   { href: '#training',     label: 'Training' },
   { href: '#contact',      label: 'Contact' },
 ]
@@ -68,13 +69,26 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hire me button */}
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/50 text-emerald-400 text-sm font-medium rounded-lg hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-200"
-        >
-          Hire Me
-        </a>
+        {/* Action buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="/cv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-slate-400 text-sm font-medium rounded-lg hover:text-slate-100 transition-colors duration-200"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h4a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            </svg>
+            Download CV
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/50 text-emerald-400 text-sm font-medium rounded-lg hover:bg-emerald-500/10 hover:border-emerald-400 transition-all duration-200"
+          >
+            Hire Me
+          </a>
+        </div>
 
         {/* Hamburger */}
         <button

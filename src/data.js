@@ -2,12 +2,13 @@ export const personalInfo = {
   name: 'Pavol Hrabčák',
   title: 'QA Engineer',
   subtitle: 'Web & Desktop Application Testing · Test Automation · Quality Advocate',
-  email: 'pavol.hrabcak@email.com',       // ← update
-  linkedin: 'linkedin.com/in/pavol-hrabcak', // ← update
-  github: 'github.com/pavol-hrabcak',       // ← update
-  location: 'Slovakia',
+  email: 'pali.hrabcak@gmail.com',
+  linkedin: 'linkedin.com/in/pavol-hrabcak-856388303',
+  github: '',
+  location: 'Košice, Slovakia',
   available: true,
   summary: 'QA Engineer with a background in both manual and automated testing, currently focused on owning quality processes for enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Passionate about improving quality practices, reducing testing inefficiencies, and leveraging modern tools—including AI-assisted workflows—to accelerate software delivery without compromising quality.',
+  languages: ['English', 'Slovak', 'Czech'],
   stats: [
     { value: '12+',  label: 'Years Experience' },
     { value: '8',    label: 'Projects Delivered' },
@@ -28,6 +29,7 @@ export const skills = [
       { name: 'User Acceptance Testing',    level: 88 },
       { name: 'Smoke & Sanity Testing',     level: 95 },
       { name: 'Compatibility Testing',      level: 82 },
+      { name: 'Chrome DevTools',            level: 85 },
     ],
   },
   {
@@ -35,12 +37,13 @@ export const skills = [
     emoji: '⚙️',
     accent: { border: 'rgba(129,140,248,0.3)', glow: 'rgba(129,140,248,0.08)' },
     items: [
-      { name: 'Playwright',                 level: 90 },
+      { name: 'Playwright',                 level: 85 },
       { name: 'Cypress',                    level: 85 },
-      { name: 'Selenium WebDriver',         level: 82 },
-      { name: 'Page Object Model (POM)',    level: 92 },
+      { name: 'Selenium WebDriver',         level: 62 },
+      { name: 'Page Object Model (POM)',    level: 90 },
       { name: 'BDD / Cucumber / Gherkin',  level: 80 },
-      { name: 'Locators (XPath / CSS)',     level: 88 },
+      { name: 'Web Automation Locators',    level: 88 },
+      { name: 'CI Integration',             level: 80 },
     ],
   },
   {
@@ -48,9 +51,9 @@ export const skills = [
     emoji: '🌐',
     accent: { border: 'rgba(168,85,247,0.3)', glow: 'rgba(168,85,247,0.08)' },
     items: [
-      { name: 'REST API Testing',           level: 90 },
-      { name: 'Postman',                    level: 88 },
-      { name: 'JMeter',                     level: 75 },
+      { name: 'REST API Testing',           level: 80 },
+      { name: 'Postman',                    level: 80 },
+      { name: 'JMeter',                     level: 62 },
     ],
   },
   {
@@ -71,7 +74,7 @@ export const technologies = [
     color: 'text-orange-300',
     bg: 'rgba(249,115,22,0.08)',
     border: 'rgba(249,115,22,0.25)',
-    items: ['GitHub', 'GitHub Actions', 'Azure DevOps', 'Jenkins', 'Docker', 'Linux', 'Terminal'],
+    items: ['GitHub', 'GitHub Actions', 'Azure DevOps', 'Jenkins', 'Docker', 'Vercel', 'Linux', 'Terminal'],
   },
   {
     category: 'Bug Tracking & TMS',
@@ -92,14 +95,14 @@ export const technologies = [
     color: 'text-cyan-300',
     bg: 'rgba(6,182,212,0.08)',
     border: 'rgba(6,182,212,0.25)',
-    items: ['SQL', 'JSON', 'XML'],
+    items: ['SQL', 'JSON', 'XML', 'Supabase'],
   },
   {
     category: 'Design & Markup',
     color: 'text-pink-300',
     bg: 'rgba(236,72,153,0.08)',
     border: 'rgba(236,72,153,0.25)',
-    items: ['Figma', 'Zeplin', 'HTML', 'CSS', 'Tailwind', 'Bootstrap'],
+    items: ['Figma', 'Zeplin', 'HTML', 'CSS', 'Tailwind', 'Bootstrap', 'Oracle BCC CMS'],
   },
   {
     category: 'Reporting & Documentation',
@@ -112,50 +115,81 @@ export const technologies = [
 
 export const experience = [
   {
-    role: 'Senior QA Engineer',
-    company: 'TechCorp Solutions',
-    period: 'Mar 2022 — Present',
+    role: 'QA Automation Engineer',
+    company: 'Hotovo — Global Manufacturing Company',
+    period: '07/2025 – Present',
     description:
-      'Leading QA efforts for a large-scale SaaS web platform serving 100 000+ users. Building and maintaining automation frameworks using Playwright and Cypress. Mentoring junior QA engineers and establishing testing best practices across teams.',
+      'Sole QA owner responsible for release confidence, test strategy, and automation architecture for an enterprise translation platform supporting document translation, reporting, administration, and role-based workflows.',
     highlights: [
-      'Reduced regression testing time by 60 % through automation',
-      'Built end-to-end test framework from scratch with Playwright + TypeScript',
-      'Integrated automated tests into CI/CD pipeline with GitHub Actions',
+      'Built and scaled a Playwright + TypeScript automation suite with 450+ E2E tests',
+      'Implemented comprehensive RBAC, API mocking, accessibility (axe-core), and regression coverage',
+      'Designed reusable Page Object Model architecture, fixtures, and shared testing utilities',
+      'Reduced manual regression effort through stable, low-flakiness automation and CI integration',
     ],
-    tech: ['Playwright', 'TypeScript', 'JIRA', 'GitHub Actions', 'Docker', 'Allure'],
+    tech: ['Playwright', 'TypeScript', 'Azure DevOps', 'axe-core', 'API Mocking', 'RBAC Testing', 'Manual Testing'],
+  },
+  {
+    role: 'QA Automation Engineer',
+    company: 'Hotovo — Global Manufacturing Company',
+    period: '10/2023 – 07/2025',
+    description:
+      'Member of an international QA team delivering automated test coverage for a large enterprise application consisting of approximately 10 modules. Responsible for end-to-end testing of a dedicated module using Cypress and Cucumber BDD.',
+    highlights: [
+      'Owned E2E test coverage for a dedicated module within a 10-module enterprise application',
+      'Implemented automated tests using Cypress + Cucumber following BDD practices',
+      'Collaborated with QA colleagues across regions to align coverage and support release cycles',
+      'Contributed to test planning, defect reporting, and regression validation',
+    ],
+    tech: ['Cypress', 'Cucumber', 'BDD', 'TypeScript', 'JIRA', 'Manual Testing', 'Figma'],
+  },
+  {
+    role: 'QA Engineer / CMS Content Administrator',
+    company: 'GlobalLogic — Cell Signaling Technology',
+    period: '10/2018 – 10/2023',
+    description:
+      'Supported the delivery and quality of a large-scale multilingual scientific web platform by managing content publication, validating releases, and coordinating website updates across multiple business teams. Served as a key link between marketing, designers, developers, and QA throughout the content delivery lifecycle.',
+    highlights: [
+      'Delivered hundreds of website updates including product pages, landing pages, navigation changes, metadata, and multilingual content',
+      'Validated new functionality and content releases in UAT environments before production deployment',
+      'Maintained structured content and data using Oracle BCC CMS, HTML, CSS, JSON, and XML',
+      'Mentored team members and helped establish consistent publishing practices',
+    ],
+    tech: ['UAT Testing', 'Oracle BCC CMS', 'HTML/CSS', 'JSON/XML', 'JIRA', 'GitHub', 'Bitbucket', 'Zeplin'],
   },
   {
     role: 'QA Engineer',
-    company: 'DesktopApp Studio',
-    period: 'Jun 2020 — Feb 2022',
+    company: 'GlobalLogic — OneTrack',
+    period: '01/2017 – 09/2018',
     description:
-      'Responsible for QA of Windows desktop applications built with WinForms and Electron. Performed manual and automated testing across multiple product versions. Collaborated closely with developers in Agile/Scrum environment.',
+      'Performed manual and automated testing for OneTrack, an online real-time medical equipment management system tracking 50,000+ devices across healthcare facilities. Responsible for test planning, test case design, and defect reporting in a regulated environment.',
     highlights: [
-      'Automated 200+ test cases for desktop application regression suite',
-      'Reduced bug escape rate by 40 % through improved test coverage',
-      'Introduced BDD practices using Cucumber and Gherkin',
+      'Executed manual and Selenium-based automated tests across core equipment tracking and reporting workflows',
+      'Designed and maintained test cases and test plans in TestLink',
+      'Validated bar code scanning, RFID, user compliance reporting, and maintenance tracking features',
+      'Collaborated with developers on defect triage and regression cycles',
     ],
-    tech: ['Selenium', 'Python', 'pytest', 'Cucumber', 'Jenkins', 'TestRail'],
+    tech: ['Selenium', 'TestLink', 'Manual Testing', 'JIRA', 'Test Planning'],
   },
   {
-    role: 'Junior QA Engineer',
-    company: 'WebDev Agency',
-    period: 'Sep 2018 — May 2020',
+    role: 'QA & Application Administrator',
+    company: 'T-Systems International',
+    period: '04/2007 – 12/2016',
     description:
-      'Started QA career testing web applications for agency clients across various industries. Focused on manual testing, writing test plans, test cases, and detailed bug reports. First experience with Selenium WebDriver automation.',
+      'Combined application support, testing, and data analysis responsibilities for enterprise business systems. Built experience in software quality, defect investigation, data validation, and stakeholder collaboration while supporting production environments and business operations.',
     highlights: [
-      'Tested 15+ client web projects from kickoff to delivery',
-      'Created comprehensive test documentation and test plans',
-      'First automation experience with Selenium WebDriver + Java',
+      'Executed manual testing and defect reporting for web applications and business workflows',
+      'Validated data quality, monitored integrations, and investigated production issues',
+      'Performed SQL-based analysis and reporting using SAP BusinessObjects and XML datasets',
+      'Administered user roles and permissions while supporting customers during on-call operations',
     ],
-    tech: ['Selenium', 'Java', 'Postman', 'JIRA', 'Bugzilla', 'SQL'],
+    tech: ['Manual Testing', 'SQL', 'SAP BO', 'XML', 'Data Quality', 'Business Reporting', 'Production Support'],
   },
 ]
 
 export const caseStudy = {
   title: 'Enterprise Translation Platform Quality Transformation',
-  company: 'Global Manufacturing Company',
-  period: '2024 – Present',
+  company: 'Hotovo — Global Manufacturing Company',
+  period: '07/2025 – Present',
   role: 'QA Automation Engineer',
   summary:
     "Built and scaled a Playwright-based automation framework for an enterprise translation platform, becoming the sole QA owner responsible for release confidence, test strategy, and automation architecture across multiple business-critical modules.",
@@ -231,5 +265,41 @@ export const training = [
     provider: 'ISTQB',
     type: 'Certification',
     description: 'Official ISTQB certification covering software testing fundamentals, techniques, and best practices.',
+  },
+]
+
+export const projects = [
+  {
+    title: 'Ľudovky z Východu',
+    subtitle: 'Folk Songs Database',
+    description: 'Bilingual digital archive of 400+ folk songs from Eastern Slovakia. Built on 2 years of personal content work — collecting songs, creating music sheets, and recording MP3 samples — combined with a full-featured web platform for preserving and sharing regional musical heritage.',
+    url: 'https://ludovky-z-vychodu.vercel.app/',
+    status: 'Invite Only',
+    roles: ['Product Owner', 'QA', 'AI-Assisted Dev', 'Content Creator'],
+    features: [
+      '2 years of content creation — song collection, music sheets and MP3 recordings',
+      'Browse and search 400+ folk songs with full lyrics',
+      'Favourites, full-screen view, copy and print lyrics',
+      'View, download and print PDF sheet music',
+      'Admin panel with bulk CSV song upload and editing',
+      'Slovak / English language switch',
+    ],
+    tech: ['React', 'Tailwind', 'Vite', 'Supabase'],
+  },
+  {
+    title: 'Machins SK',
+    subtitle: 'British Stamps Collectors Guide',
+    description: 'Comprehensive Slovak-language collectors guide for British Machin definitive stamps — the result of several years of personal philatelic study and research. Covers the full history, variants, and identifying characteristics of this iconic Queen Elizabeth II stamp series.',
+    url: 'https://machins-sk.vercel.app/',
+    status: 'Live',
+    roles: ['Product Owner', 'QA', 'AI-Assisted Dev', 'Content Creator'],
+    features: [
+      'Years of philatelic research and professional content preparation',
+      'Full history of the Machin definitive stamp series',
+      'Types, parameters and security features to distinguish variants',
+      'Rarities, regional and anniversary printings',
+      'Philatelic dictionary of related terms',
+    ],
+    tech: ['React', 'Tailwind', 'Node.js'],
   },
 ]

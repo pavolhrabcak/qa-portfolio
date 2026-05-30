@@ -19,7 +19,7 @@ export default function About() {
             <p className="text-slate-300 text-lg leading-relaxed mb-8">
               {personalInfo.summary}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-6">
               {tags.map(t => (
                 <span key={t}
                   className="px-3 py-1 rounded-md text-sm font-mono text-emerald-300"
@@ -27,6 +27,19 @@ export default function About() {
                   {t}
                 </span>
               ))}
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-mono uppercase tracking-widest text-slate-500">Languages</span>
+              <div className="flex gap-2">
+                {personalInfo.languages.map(lang => (
+                  <span key={lang}
+                    className="px-3 py-1 rounded-md text-sm font-mono text-slate-300"
+                    style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.4)' }}>
+                    {lang}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 

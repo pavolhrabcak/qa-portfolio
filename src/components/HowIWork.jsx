@@ -17,7 +17,7 @@ const STEPS = [
     title: 'Test Design',
     description:
       'Define test scenarios covering happy paths, edge cases, negative flows, and boundary conditions. Build the test strategy.',
-    tools: ['TestLink', 'JIRA'],
+    tools: ['TestLink', 'JIRA', 'Azure DevOps'],
   },
   {
     number: '03',
@@ -25,7 +25,7 @@ const STEPS = [
     title: 'Execution',
     description:
       'Run manual and automated suites, log defects with full reproduction steps, screenshots, and environment details.',
-    tools: ['Playwright', 'Cypress', 'Postman', 'JMeter'],
+    tools: ['Playwright', 'Cypress', 'Chrome DevTools', 'Postman'],
   },
   {
     number: '04',

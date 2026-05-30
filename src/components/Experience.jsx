@@ -1,79 +1,155 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { experience } from '../data'
 import { useInView } from '../hooks/useInView'
 import { SectionHeader } from './About'
 
+function FeaturedCard({ exp, visible }) {
+  return (
+    <div
+      className="rounded-2xl overflow-hidden mb-8"
+      style={{
+        background: 'rgba(15,23,42,0.6)',
+        border: '1px solid rgba(16,185,129,0.2)',
+        backdropFilter: 'blur(12px)',
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 0.4s ease, transform 0.4s ease',
+      }}
+    >
+      {/* Header bar */}
+      <div
+        className="px-6 py-4 flex items-center justify-between"
+        style={{ borderBottom: '1px solid rgba(16,185,129,0.15)', background: 'rgba(16,185,129,0.04)' }}
+      >
+        <span
+          className="text-xs font-mono font-bold px-3 py-1 rounded-full uppercase tracking-widest"
+          style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)' }}
+        >
+          ★ Current Role
+        </span>
+        <span
+          className="text-xs font-mono px-3 py-1 rounded-full"
+          style={{ background: 'rgba(51,65,85,0.6)', color: '#94a3b8' }}
+        >
+          {exp.period}
+        </span>
+      </div>
+
+      {/* Body */}
+      <div className="p-6">
+        <h3 className="text-white font-bold text-xl leading-tight mb-1">{exp.role}</h3>
+        <p className="text-emerald-400 font-medium text-sm mb-4">{exp.company}</p>
+
+        <p className="text-slate-400 text-sm leading-relaxed mb-5">{exp.description}</p>
+
+        <ul className="space-y-2 mb-5">
+          {exp.highlights.map((h, i) => (
+            <li key={i} className="flex gap-2 text-sm text-slate-300">
+              <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
+              {h}
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex flex-wrap gap-1.5">
+          {exp.tech.map(t => (
+            <span
+              key={t}
+              className="text-xs px-2 py-0.5 rounded font-mono text-slate-300"
+              style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.5)' }}
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function CompactCard({ exp, index, visible }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div
+      className="rounded-xl overflow-hidden"
+      style={{
+        border: '1px solid rgba(51,65,85,0.5)',
+        background: 'rgba(15,23,42,0.4)',
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(16px)',
+        transition: `opacity 0.4s ease ${index * 100}ms, transform 0.4s ease ${index * 100}ms`,
+      }}
+    >
+      {/* Row */}
+      <button
+        className="w-full px-6 py-4 flex items-center justify-between gap-4 text-left hover:bg-slate-800/30 transition-colors duration-150"
+        onClick={() => setOpen(o => !o)}
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 min-w-0">
+          <span className="text-white font-semibold text-sm leading-tight">{exp.role}</span>
+          <span className="text-slate-500 text-xs font-mono hidden sm:block">·</span>
+          <span className="text-emerald-400 text-xs font-medium">{exp.company}</span>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          <span className="text-xs font-mono text-slate-500 hidden sm:block">{exp.period}</span>
+          <span
+            className="text-slate-400 text-xs font-mono transition-transform duration-200"
+            style={{ transform: open ? 'rotate(90deg)' : 'rotate(0deg)', display: 'inline-block' }}
+          >
+            ▸
+          </span>
+        </div>
+      </button>
+
+      {/* Expanded content */}
+      {open && (
+        <div
+          className="px-6 pb-5"
+          style={{ borderTop: '1px solid rgba(51,65,85,0.4)' }}
+        >
+          <p className="text-slate-400 text-sm leading-relaxed mt-4 mb-4">{exp.description}</p>
+          <ul className="space-y-1.5 mb-4">
+            {exp.highlights.map((h, i) => (
+              <li key={i} className="flex gap-2 text-sm text-slate-300">
+                <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
+                {h}
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap gap-1.5">
+            {exp.tech.map(t => (
+              <span
+                key={t}
+                className="text-xs px-2 py-0.5 rounded font-mono text-slate-400"
+                style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.5)' }}
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Experience() {
   const ref = useRef(null)
   const visible = useInView(ref)
+  const [featured, ...rest] = experience
 
   return (
     <section id="experience" className="py-28 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="04" title="Experience" />
+        <SectionHeader index="05" title="Experience" />
 
-        <div className="relative mt-12">
-          {/* Vertical line */}
-          <div
-            className="absolute left-3 md:left-1/2 top-0 bottom-0 w-px"
-            style={{ background: 'rgba(51,65,85,0.8)', transform: 'translateX(-50%)' }}
-          />
+        <div className="mt-12">
+          <FeaturedCard exp={featured} visible={visible} />
 
-          <div className="space-y-14">
-            {experience.map((exp, i) => (
-              <div key={i} className="relative flex gap-8">
-                {/* Timeline dot */}
-                <div
-                  className="absolute left-3 md:left-1/2 top-7 w-3 h-3 rounded-full bg-emerald-500 ring-4 z-10"
-                  style={{ transform: 'translate(-50%, -50%)', ringColor: '#0a0f1e' }}
-                />
-
-                {/* Card — alternate sides on md+ */}
-                <div className={`ml-10 md:ml-0 w-full md:w-[calc(50%-2rem)] ${
-                  i % 2 === 0 ? 'md:mr-auto md:pr-4' : 'md:ml-auto md:pl-4'
-                }`}>
-                  <div className="glass card-hover p-6 rounded-xl">
-                    {/* Header */}
-                    <div className="flex flex-wrap items-start justify-between gap-3 mb-1">
-                      <div>
-                        <h3 className="text-white font-bold text-lg leading-tight">{exp.role}</h3>
-                        <p className="text-emerald-400 font-medium text-sm mt-0.5">{exp.company}</p>
-                      </div>
-                      <span
-                        className="text-xs font-mono px-3 py-1 rounded-full whitespace-nowrap"
-                        style={{ background: 'rgba(51,65,85,0.6)', color: '#94a3b8' }}
-                      >
-                        {exp.period}
-                      </span>
-                    </div>
-
-                    <p className="text-slate-400 text-sm leading-relaxed mt-3 mb-4">{exp.description}</p>
-
-                    {/* Highlights */}
-                    <ul className="space-y-1.5 mb-5">
-                      {exp.highlights.map((h, j) => (
-                        <li key={j} className="flex gap-2 text-sm text-slate-300">
-                          <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-1.5">
-                      {exp.tech.map(t => (
-                        <span
-                          key={t}
-                          className="text-xs px-2 py-0.5 rounded font-mono text-slate-400"
-                          style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.5)' }}
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="space-y-3">
+            {rest.map((exp, i) => (
+              <CompactCard key={i} exp={exp} index={i} visible={visible} />
             ))}
           </div>
         </div>

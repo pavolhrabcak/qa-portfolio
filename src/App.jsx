@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -5,12 +6,14 @@ import Skills from './components/Skills'
 import Experience from './components/Experience'
 import FeaturedCaseStudy from './components/FeaturedCaseStudy'
 import HowIWork from './components/HowIWork'
+import PersonalProjects from './components/PersonalProjects'
 import Training from './components/Training'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import CVPage from './pages/CVPage'
 
-export default function App() {
+function Portfolio() {
   return (
     <div className="min-h-screen bg-[#0a0f1e]">
       <Navbar />
@@ -20,10 +23,20 @@ export default function App() {
       <Skills />
       <Experience />
       <FeaturedCaseStudy />
+      <PersonalProjects />
       <Training />
       <Contact />
       <Footer />
       <ScrollToTop />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/cv" element={<CVPage />} />
+    </Routes>
   )
 }

@@ -189,7 +189,6 @@ export default function Hero() {
 
             <div className="flex items-center gap-6 justify-center lg:justify-start">
               {[
-                { href: `https://${personalInfo.github}`,   icon: <GitHubIcon />,   label: 'GitHub'   },
                 { href: `https://${personalInfo.linkedin}`, icon: <LinkedInIcon />, label: 'LinkedIn' },
                 { href: `mailto:${personalInfo.email}`,     icon: <EmailIcon />,    label: 'Email'    },
               ].map(({ href, icon, label }) => (
