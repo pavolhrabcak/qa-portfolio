@@ -52,28 +52,36 @@ export default function Contact() {
     summary: '', reporter: '', environment: '', priority: 'p3', steps: '', response: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
 
   const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const p = PRIORITIES.find(p => p.id === form.priority)
-    const body = [
-      `SUMMARY: ${form.summary}`,
-      `REPORTER: ${form.reporter}`,
-      `ENVIRONMENT: ${form.environment}`,
-      `PRIORITY: ${p?.label}`,
-      ``,
-      `STEPS TO REPRODUCE (What you need):`,
-      form.steps,
-      ``,
-      `EXPECTED RESPONSE: ${form.response}`,
-    ].join('\n')
+    setError(false)
 
-    window.location.href =
-      `mailto:${personalInfo.email}?subject=[${p?.label}] New Inquiry from ${encodeURIComponent(form.reporter || 'Unknown')}&body=${encodeURIComponent(body)}`
-
-    setSubmitted(true)
+    try {
+      const res = await fetch('https://formspree.io/f/xqejopey', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          summary: form.summary,
+          reporter: form.reporter,
+          environment: form.environment,
+          priority: p?.label,
+          message: form.steps,
+          response_time: form.response,
+        }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    }
   }
 
   const focusStyle = { borderColor: 'rgba(16,185,129,0.6)' }
@@ -107,15 +115,12 @@ export default function Contact() {
             /* Success state */
             <div className="px-6 py-16 text-center">
               <div className="text-5xl mb-4">✓</div>
-              <div
-                className="text-xl font-mono font-bold mb-2"
-                style={{ color: '#10b981' }}
-              >
+              <div className="text-xl font-mono font-bold mb-2" style={{ color: '#10b981' }}>
                 Bug Report Submitted
               </div>
-              <p className="text-slate-400 text-sm">Your email client should have opened with the report pre-filled.</p>
+              <p className="text-slate-400 text-sm">Message received — I'll get back to you soon.</p>
               <button
-                onClick={() => setSubmitted(false)}
+                onClick={() => { setSubmitted(false); setForm({ summary: '', reporter: '', environment: '', priority: 'p3', steps: '', response: '' }) }}
                 className="mt-6 text-xs font-mono text-slate-500 hover:text-slate-300 transition-colors underline"
               >
                 Submit another report
@@ -235,6 +240,10 @@ export default function Contact() {
                   {RESPONSE_TIMES.map(r => <option key={r} value={r}>{r}</option>)}
                 </select>
               </Field>
+
+              {error && (
+                <p className="text-red-400 text-xs font-mono">Something went wrong — please try again or reach out directly via email.</p>
+              )}
 
               {/* Submit */}
               <div className="flex items-center justify-between pt-2">
