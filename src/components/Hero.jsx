@@ -82,22 +82,14 @@ function MetricsWidget() {
         ))}
       </div>
 
-      {/* Last run row */}
+      {/* Tech stack row */}
       <div
         className="px-5 py-3.5"
-        style={{ borderTop: '1px solid rgba(51,65,85,0.5)', background: 'rgba(16,185,129,0.04)' }}
+        style={{ borderTop: '1px solid rgba(51,65,85,0.5)' }}
       >
-        <div className="flex items-center gap-2 text-xs font-mono mb-1">
-          <span className="text-emerald-400">✓</span>
-          <span className="text-slate-300">Full Regression Suite</span>
-          <span
-            className="ml-auto text-xs px-2 py-0.5 rounded font-mono"
-            style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)' }}
-          >
-            PASSED
-          </span>
+        <div className="text-xs font-mono text-slate-500 tracking-wide">
+          Playwright · TypeScript · Azure DevOps
         </div>
-        <div className="text-slate-600 text-xs font-mono">450/450 tests · 0 failures · 2 min ago</div>
       </div>
 
       {/* Activity sparkline (decorative) */}
