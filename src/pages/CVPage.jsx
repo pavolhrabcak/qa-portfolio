@@ -1,4 +1,4 @@
-import { personalInfo, experience, skills, training, projects } from '../data'
+import { personalInfo, experience, skills, training } from '../data'
 
 const CONTACT = [
   { label: 'Email',    value: personalInfo.email },
@@ -142,34 +142,6 @@ export default function CVPage() {
             </div>
           </Section>
 
-          {/* Personal Projects */}
-          <Section title="Personal Projects">
-            <div className="grid grid-cols-2 gap-x-8" style={{ breakInside: 'avoid' }}>
-              {projects.map(p => (
-                <div key={p.title}>
-                  <div className="mb-0.5" style={{ fontFamily: 'system-ui, sans-serif' }}>
-                    <span className="font-bold text-sm text-gray-900">{p.title}</span>
-                    <span className="text-emerald-700 text-xs font-medium ml-1">— {p.subtitle}</span>
-                  </div>
-                  <div className="text-xs text-gray-400 mb-1">{p.url}</div>
-                  <ul className="space-y-0.5 mb-1.5">
-                    {p.features.slice(0, 3).map((f, i) => (
-                      <li key={i} className="text-xs text-gray-700 flex gap-2">
-                        <span className="text-emerald-600 shrink-0">▸</span>{f}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-1">
-                    {p.tech.map(t => (
-                      <span key={t} className="text-xs px-1.5 py-0.5 bg-gray-100 text-gray-600 rounded border border-gray-200" style={{ fontFamily: 'system-ui, sans-serif' }}>
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Section>
 
         </div>
       </div>
