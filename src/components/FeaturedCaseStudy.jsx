@@ -61,7 +61,7 @@ export default function FeaturedCaseStudy() {
 
           {/* Body */}
           <div className="p-8">
-            <p className="text-slate-300 leading-relaxed mb-4 max-w-3xl">{caseStudy.summary}</p>
+            <p className="text-slate-300 leading-relaxed mb-4">{caseStudy.summary}</p>
 
             {caseStudy.sectionsOwned && (
               <div className="mb-8">
