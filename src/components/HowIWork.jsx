@@ -70,7 +70,7 @@ export default function HowIWork() {
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="02" title="How I Work" />
 
-        <p className="text-slate-400 mt-4 mb-14 text-base leading-relaxed whitespace-nowrap">
+        <p className="text-slate-400 mt-4 mb-14 text-base leading-relaxed">
           My testing process is repeatable, traceable, and built to catch issues early — before they reach production.
         </p>
 
