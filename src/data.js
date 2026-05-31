@@ -7,7 +7,7 @@ export const personalInfo = {
   github: '',
   location: 'Košice, Slovakia',
   available: true,
-  summary: 'QA Engineer with a background in both manual and automated testing, currently focused on owning quality processes for enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Focused on improving release confidence through risk-based testing, maintainable automation, and efficient QA workflows supported by modern AI tools.',
+  summary: 'QA Engineer with a background in both manual and automated testing, currently responsible for quality processes across enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Committed to improving release confidence through risk-based testing, maintainable automation, and efficient QA workflows supported by modern AI tools.',
   languages: ['English', 'Slovak', 'Czech'],
   stats: [
     { value: '12+',  label: 'Years Experience' },
