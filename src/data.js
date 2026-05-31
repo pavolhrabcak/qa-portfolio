@@ -197,7 +197,7 @@ export const caseStudy = {
     "The application supports document and text translation workflows used across a global organization—covering role-based areas, complex data tables, reporting features, administration screens, file processing workflows, and strict authorization requirements. As the team structure changed and engineering resources were reduced, maintaining release confidence required a scalable automation strategy that could validate business-critical functionality without creating excessive maintenance overhead or slow execution times.",
   approach: [
     "Designed and expanded a Playwright + TypeScript framework with Page Object Model architecture, reusable utilities, and shared fixtures.",
-    "Implemented role-based testing strategy covering Admin, Data Science, User, and unauthorized access scenarios (full RBAC validation).",
+    "Implemented role-based testing strategy covering multiple user roles and unauthorized access scenarios (full RBAC validation).",
     "Introduced extensive API mocking to reduce backend dependencies, improve test determinism, and keep execution fast.",
     "Built end-to-end coverage across document translation, history, billing, reporting, administration, and feedback workflows.",
     "Added accessibility validation using axe-core and established quality guidelines defining E2E coverage boundaries.",
