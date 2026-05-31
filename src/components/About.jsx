@@ -3,8 +3,8 @@ import { personalInfo } from '../data'
 import { useInView } from '../hooks/useInView'
 
 const HIGHLIGHTS = [
-  'manual', 'automated testing', 'automation frameworks', 'automation',
-  'Playwright', 'end-to-end testing', 'AI-assisted workflows',
+  'manual', 'automated testing', 'automation frameworks',
+  'Playwright', 'end-to-end testing', 'supported by modern AI tools',
 ]
 
 function HighlightedText({ text }) {
