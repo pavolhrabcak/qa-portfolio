@@ -2,6 +2,7 @@ import { personalInfo, experience, skills, training } from '../data'
 
 const CONTACT = [
   { label: 'Email',    value: personalInfo.email },
+  { label: 'Phone',    value: '+421 915 946 833' },
   { label: 'LinkedIn', value: personalInfo.linkedin },
   { label: 'Location', value: personalInfo.location },
 ]
@@ -46,7 +47,7 @@ export default function CVPage() {
         className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none print:max-w-none"
         style={{ fontFamily: 'Georgia, serif' }}
       >
-        <div className="p-8 print:p-6">
+        <div className="p-8 print:p-0">
 
           {/* Header */}
           <div className="mb-5 pb-4 border-b-2 border-emerald-600">
@@ -86,10 +87,10 @@ export default function CVPage() {
                     </div>
                     <span className="text-xs text-gray-500 whitespace-nowrap">{exp.period}</span>
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed mb-2">{exp.description}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-2">{exp.description}</p>
                   <ul className="space-y-0.5 mb-2">
                     {exp.highlights.map((h, j) => (
-                      <li key={j} className="text-xs text-gray-700 flex gap-2">
+                      <li key={j} className="text-sm text-gray-700 flex gap-2">
                         <span className="text-emerald-600 shrink-0">▸</span>{h}
                       </li>
                     ))}
@@ -111,8 +112,8 @@ export default function CVPage() {
             <div className="grid grid-cols-2 gap-x-8 gap-y-3">
               {skills.map(group => (
                 <div key={group.category}>
-                  <p className="text-xs font-bold text-gray-700 mb-1" style={{ fontFamily: 'system-ui, sans-serif' }}>{group.category}</p>
-                  <p className="text-xs text-gray-600">{group.items.map(i => i.name).join(' · ')}</p>
+                  <p className="text-sm font-bold text-gray-700 mb-1" style={{ fontFamily: 'system-ui, sans-serif' }}>{group.category}</p>
+                  <p className="text-sm text-gray-600">{group.items.map(i => i.name).join(' · ')}</p>
                 </div>
               ))}
             </div>
@@ -128,6 +129,15 @@ export default function CVPage() {
                 </div>
               ))}
             </div>
+          </Section>
+
+          {/* Education */}
+          <Section title="Education">
+            <div className="flex items-baseline justify-between text-sm">
+              <span className="text-gray-800 font-medium">Technical University of Košice</span>
+              <span className="text-gray-500 text-xs">Košice, Slovakia</span>
+            </div>
+            <div className="text-sm text-gray-600 mt-0.5">Ing. (MSc) — Engineering</div>
           </Section>
 
           {/* Training */}
@@ -149,8 +159,8 @@ export default function CVPage() {
       {/* Print styles */}
       <style>{`
         @media print {
-          @page { margin: 1cm; size: A4; }
-          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          @page { margin: 1.5cm; size: A4; }
+          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; margin: 0; padding: 0; }
         }
       `}</style>
     </div>

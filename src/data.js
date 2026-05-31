@@ -7,7 +7,7 @@ export const personalInfo = {
   github: '',
   location: 'Košice, Slovakia',
   available: true,
-  summary: 'QA Engineer with a background in both manual and automated testing, currently responsible for quality processes across enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Committed to improving release confidence through risk-based testing, maintainable automation, and efficient QA workflows supported by modern AI tools.',
+  summary: 'QA Engineer with a background in both manual and automated testing, currently responsible for quality processes across enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Focused on maintainable automation, risk-based testing, and efficient QA workflows supported by modern AI tools.',
   languages: ['English', 'Slovak', 'Czech'],
   stats: [
     { value: '12+',  label: 'Years Experience' },
@@ -116,7 +116,7 @@ export const technologies = [
 export const experience = [
   {
     role: 'QA Automation Engineer',
-    company: 'Hotovo — Global Manufacturing Company',
+    company: 'Hotovo',
     period: '07/2025 – Present',
     description:
       'Sole QA owner responsible for release confidence, test strategy, and automation framework development for an enterprise translation platform supporting document translation, reporting, administration, and role-based workflows.',
@@ -130,7 +130,7 @@ export const experience = [
   },
   {
     role: 'QA Automation Engineer',
-    company: 'Hotovo — Global Manufacturing Company',
+    company: 'Hotovo',
     period: '10/2023 – 07/2025',
     description:
       'Member of an international QA team delivering automated test coverage for a large enterprise application consisting of approximately 10 modules. Responsible for end-to-end testing of a dedicated module using Cypress and Cucumber BDD.',
@@ -144,7 +144,7 @@ export const experience = [
   },
   {
     role: 'Test Engineer / CMS Content Administrator',
-    company: 'GlobalLogic — Cell Signaling Technology',
+    company: 'GlobalLogic',
     period: '10/2018 – 10/2023',
     description:
       'Supported the delivery and quality of a large-scale multilingual scientific web platform by managing content publication, validating releases, and coordinating website updates across multiple business teams. Served as a key link between marketing, designers, developers, and QA throughout the content delivery lifecycle.',
@@ -158,7 +158,7 @@ export const experience = [
   },
   {
     role: 'Test Engineer',
-    company: 'GlobalLogic — OneTrack',
+    company: 'GlobalLogic',
     period: '01/2017 – 09/2018',
     description:
       'Performed manual and automated testing for OneTrack, an online real-time medical equipment management system tracking 50,000+ devices across healthcare facilities. Responsible for test planning, test case design, and defect reporting in a regulated environment.',
@@ -188,7 +188,7 @@ export const experience = [
 
 export const caseStudy = {
   title: 'Enterprise Translation Platform Quality Transformation',
-  company: 'Hotovo — Global Manufacturing Company',
+  company: 'Hotovo',
   period: '07/2025 – Present',
   role: 'QA Automation Engineer',
   summary:
