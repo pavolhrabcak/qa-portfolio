@@ -24,7 +24,7 @@ const STEPS = [
     emoji: '⚙️',
     title: 'Execution',
     description:
-      'Run manual and automated suites, log defects with full reproduction steps, screenshots, and environment details.',
+      'Run manual and automated validation, investigate defects, analyze logs and network activity, and collect evidence for efficient troubleshooting.',
     tools: ['Playwright', 'Cypress', 'Chrome DevTools', 'Postman'],
   },
   {
@@ -32,7 +32,7 @@ const STEPS = [
     emoji: '📊',
     title: 'Reporting',
     description:
-      'Generate coverage reports, defect trend analysis, and risk assessments to keep stakeholders clearly informed.',
+      'Provide release readiness assessments through coverage reporting, defect analysis, and risk evaluation.',
     tools: ['Allure Report', 'Playwright HTML Report'],
   },
   {

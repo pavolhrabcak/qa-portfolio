@@ -40,7 +40,7 @@ export const skills = [
       { name: 'Playwright',                 level: 85 },
       { name: 'Cypress',                    level: 85 },
       { name: 'Selenium WebDriver',         level: 62 },
-      { name: 'Page Object Model (POM)',    level: 90 },
+      { name: 'Page Object Model (POM)',    level: 85 },
       { name: 'BDD / Cucumber / Gherkin',  level: 80 },
       { name: 'Web Automation Locators',    level: 88 },
       { name: 'CI Integration',             level: 80 },
@@ -119,14 +119,14 @@ export const experience = [
     company: 'Hotovo — Global Manufacturing Company',
     period: '07/2025 – Present',
     description:
-      'Sole QA owner responsible for release confidence, test strategy, and automation architecture for an enterprise translation platform supporting document translation, reporting, administration, and role-based workflows.',
+      'Sole QA owner responsible for release confidence, test strategy, and automation framework development for an enterprise translation platform supporting document translation, reporting, administration, and role-based workflows.',
     highlights: [
       'Built and scaled a Playwright + TypeScript automation suite with 450+ E2E tests',
-      'Implemented comprehensive RBAC, API mocking, accessibility (axe-core), and regression coverage',
+      'Implemented RBAC validation, API mocking, accessibility checks (axe-core), and risk-based regression coverage across business-critical workflows',
       'Designed reusable Page Object Model architecture, fixtures, and shared testing utilities',
-      'Reduced manual regression effort through stable, low-flakiness automation and CI integration',
+      'Reduced manual regression effort by automating core business workflows with stable, low-flakiness Playwright tests integrated into CI pipelines',
     ],
-    tech: ['Playwright', 'TypeScript', 'Azure DevOps', 'axe-core', 'API Mocking', 'RBAC Testing', 'Manual Testing'],
+    tech: ['Playwright', 'TypeScript', 'Azure DevOps', 'axe-core', 'API Mocking', 'RBAC Testing', 'AI-Assisted QA'],
   },
   {
     role: 'QA Automation Engineer',
@@ -192,7 +192,7 @@ export const caseStudy = {
   period: '07/2025 – Present',
   role: 'QA Automation Engineer',
   summary:
-    "Built and scaled a Playwright-based automation framework for an enterprise translation platform, becoming the sole QA owner responsible for release confidence, test strategy, and automation architecture across multiple business-critical modules.",
+    "Built and scaled a Playwright + TypeScript automation solution for an enterprise translation platform, becoming the sole QA owner responsible for release confidence, test strategy, and automation architecture across multiple business-critical modules.",
   challenge:
     "The application supports document and text translation workflows used across a global organization—covering role-based areas, complex data tables, reporting features, administration screens, file processing workflows, and strict authorization requirements. As the team structure changed and engineering resources were reduced, maintaining release confidence required a scalable automation strategy that could validate business-critical functionality without creating excessive maintenance overhead or slow execution times.",
   approach: [
@@ -210,10 +210,10 @@ export const caseStudy = {
     { label: 'Role Coverage',          before: 'Partial',        after: 'Complete RBAC validation',    delta: '4 roles covered'        },
     { label: 'API Dependency',         before: 'High',           after: 'Extensively mocked',          delta: 'Low flakiness'          },
     { label: 'Accessibility Testing',  before: 'None',           after: 'Automated axe-core checks',   delta: 'Continuous a11y'        },
-    { label: 'Test Architecture',      before: 'Ad-hoc',         after: 'Reusable POM framework',      delta: 'Scalable & documented'  },
+    { label: 'Test Architecture',      before: 'Ad-hoc',         after: 'Reusable test architecture',  delta: 'Scalable & documented'  },
   ],
   impact:
-    "Enabled reliable regression validation across all major business workflows while maintaining a stable automation suite with low flakiness. Established testing standards, reusable patterns, and documentation that allow future contributors to onboard quickly and expand coverage without increasing maintenance costs. Improved release confidence by providing comprehensive validation of authentication, authorization, reporting, translation workflows, administration functions, and critical user journeys.",
+    "Reduced manual regression effort by approximately 90% while maintaining high release confidence across translation, reporting, administration, and RBAC workflows. Established reusable automation patterns, testing standards, and documentation that enable future contributors to expand coverage efficiently with minimal maintenance overhead.",
   tech: ['Playwright', 'TypeScript', 'Page Object Model', 'API Mocking', 'axe-core', 'GitHub Actions', 'RBAC Testing', 'E2E Automation', 'Accessibility Testing', 'AI-Assisted Development'],
 }
 
