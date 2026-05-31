@@ -41,9 +41,9 @@ export const skills = [
       { name: 'Cypress',                    level: 85 },
       { name: 'Selenium WebDriver',         level: 62 },
       { name: 'Page Object Model (POM)',    level: 85 },
-      { name: 'BDD / Cucumber / Gherkin',  level: 80 },
+      { name: 'BDD / Cucumber / Gherkin',  level: 70 },
       { name: 'Web Automation Locators',    level: 88 },
-      { name: 'CI Integration',             level: 80 },
+      { name: 'CI Integration',             level: 70 },
     ],
   },
   {
