@@ -202,10 +202,11 @@ export const caseStudy = {
     "Built end-to-end coverage across document translation, history, billing, reporting, administration, and feedback workflows.",
     "Added accessibility validation using axe-core and established quality guidelines defining E2E coverage boundaries.",
     "Adopted AI-assisted development workflow for test generation, code reviews, and framework improvements.",
+    "Intentionally excluded third-party-dependent scenarios (e.g. large file uploads, Azure translation service) from automation due to execution cost and instability risks — maintained as targeted manual regression.",
   ],
   comparison: [
     { label: 'E2E Coverage',           before: 'Limited',        after: '450+ automated tests',        delta: 'Full regression'        },
-    { label: 'Regression Execution',   before: 'Mostly manual',  after: 'Fully automated',             delta: 'Zero manual regression' },
+    { label: 'Regression Execution',   before: 'Mostly manual',  after: 'Core workflows automated',    delta: '~90% · risk-based'  },
     { label: 'Role Coverage',          before: 'Partial',        after: 'Complete RBAC validation',    delta: '4 roles covered'        },
     { label: 'API Dependency',         before: 'High',           after: 'Extensively mocked',          delta: 'Low flakiness'          },
     { label: 'Accessibility Testing',  before: 'None',           after: 'Automated axe-core checks',   delta: 'Continuous a11y'        },
