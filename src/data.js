@@ -143,7 +143,7 @@ export const experience = [
     tech: ['Cypress', 'Cucumber', 'BDD', 'TypeScript', 'JIRA', 'Manual Testing', 'Figma'],
   },
   {
-    role: 'QA Engineer / CMS Content Administrator',
+    role: 'Test Engineer / CMS Content Administrator',
     company: 'GlobalLogic — Cell Signaling Technology',
     period: '10/2018 – 10/2023',
     description:
@@ -157,7 +157,7 @@ export const experience = [
     tech: ['UAT Testing', 'Oracle BCC CMS', 'HTML/CSS', 'JSON/XML', 'JIRA', 'GitHub', 'Bitbucket', 'Zeplin'],
   },
   {
-    role: 'QA Engineer',
+    role: 'Test Engineer',
     company: 'GlobalLogic — OneTrack',
     period: '01/2017 – 09/2018',
     description:

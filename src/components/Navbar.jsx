@@ -24,6 +24,7 @@ export default function Navbar() {
         const el = document.getElementById(id)
         if (el && el.getBoundingClientRect().top <= 120) {
           setActive(id)
+          history.replaceState(null, '', `#${id}`)
           break
         }
       }
