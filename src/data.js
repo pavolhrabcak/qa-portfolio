@@ -1,13 +1,13 @@
 export const personalInfo = {
   name: 'Pavol Hrabčák',
   title: 'QA Automation Engineer',
-  subtitle: 'Playwright · TypeScript · Quality Engineering · AI-Assisted Workflows',
+  subtitle: 'Building quality strategies that prioritize value over automation percentages.',
   email: 'pali.hrabcak@gmail.com',
   linkedin: 'linkedin.com/in/pavol-hrabcak-856388303',
   github: '',
   location: 'Košice, Slovakia',
   available: true,
-  summary: 'QA Engineer with a background in both manual and automated testing, currently responsible for quality processes across enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Focused on maintainable automation, risk-based testing, and efficient QA workflows supported by modern AI tools.',
+  summary: 'QA Engineer with a background in both manual and automated testing, currently responsible for quality processes across enterprise applications. Experienced in building and scaling Playwright-based automation frameworks, defining test strategies, implementing RBAC and API validation, and driving release confidence through reliable end-to-end testing. Focused on risk-based testing, scalable automation, and efficient QA workflows supported by modern AI tools. Rather than measuring success by automation percentages alone, I build sustainable quality strategies that balance coverage, execution speed, long-term maintenance costs, and business risk.',
   languages: ['English', 'Slovak', 'Czech'],
   stats: [
     { value: '12+',  label: 'Years Experience' },

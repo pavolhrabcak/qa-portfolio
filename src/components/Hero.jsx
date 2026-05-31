@@ -21,13 +21,13 @@ const EmailIcon = () => (
 )
 
 const METRICS = [
-  { value: 450, display: '450',  label: 'E2E Tests',      color: '#818cf8', delay: 200 },
-  { value: 98,  display: '98%',  label: 'Pass Rate',      color: '#10b981', delay: 350, bar: 98 },
-  { value: 4,   display: '4',    label: 'Roles Covered',  color: '#a78bfa', delay: 500 },
-  { value: 0,   display: '0',    label: 'P1 Bugs Open',   color: '#10b981', delay: 650 },
+  { line1: 'Enterprise',  line2: 'Applications', color: '#818cf8', delay: 200 },
+  { line1: 'RBAC',        line2: 'Validation',   color: '#10b981', delay: 350 },
+  { line1: 'Release',     line2: 'Confidence',    color: '#a78bfa', delay: 500 },
+  { line1: 'E2E',         line2: 'Automation',    color: '#fbbf24', delay: 650 },
 ]
 
-function MetricCell({ display, label, color, bar, delay }) {
+function MetricCell({ line1, line2, color, delay }) {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), delay)
@@ -36,25 +36,15 @@ function MetricCell({ display, label, color, bar, delay }) {
 
   return (
     <div
-      className="px-5 py-4 transition-opacity duration-500"
+      className="px-5 py-5 transition-opacity duration-500 flex flex-col justify-center"
       style={{ opacity: visible ? 1 : 0, background: 'rgba(10,15,30,0.5)' }}
     >
-      <div className="text-2xl font-bold font-mono leading-none mb-1" style={{ color }}>
-        {display}
+      <div className="text-lg font-bold font-mono leading-tight" style={{ color }}>
+        {line1}
       </div>
-      <div className="text-slate-500 text-xs">{label}</div>
-      {bar != null && (
-        <div className="mt-2 h-1 rounded-full overflow-hidden" style={{ background: 'rgba(51,65,85,0.5)' }}>
-          <div
-            className="h-full rounded-full"
-            style={{
-              background: 'linear-gradient(90deg, #059669, #10b981)',
-              width: visible ? `${bar}%` : '0%',
-              transition: 'width 1.2s ease 0.2s',
-            }}
-          />
-        </div>
-      )}
+      <div className="text-lg font-bold font-mono leading-tight text-slate-300">
+        {line2}
+      </div>
     </div>
   )
 }
@@ -88,7 +78,7 @@ function MetricsWidget() {
       {/* Metrics 2×2 grid */}
       <div className="grid grid-cols-2" style={{ gap: '1px', background: 'rgba(51,65,85,0.3)' }}>
         {METRICS.map(m => (
-          <MetricCell key={m.label} {...m} />
+          <MetricCell key={m.line1} {...m} />
         ))}
       </div>
 
