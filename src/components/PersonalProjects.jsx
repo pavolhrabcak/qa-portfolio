@@ -15,10 +15,11 @@ function ProjectCard({ project, index, visible }) {
 
   return (
     <div
-      className="glass card-hover rounded-2xl overflow-hidden flex flex-col"
+      className="card-hover rounded-2xl overflow-hidden flex flex-col"
       style={{
-        border: '1px solid rgba(71,85,105,0.4)',
-        opacity: visible ? 1 : 0,
+        background: 'rgba(15,23,42,0.35)',
+        border: '1px solid rgba(51,65,85,0.35)',
+        opacity: visible ? 0.9 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(24px)',
         transition: `opacity 0.4s ease ${index * 150}ms, transform 0.4s ease ${index * 150}ms`,
       }}
@@ -26,11 +27,17 @@ function ProjectCard({ project, index, visible }) {
       {/* Card header */}
       <div
         className="px-6 py-5"
-        style={{ borderBottom: '1px solid rgba(51,65,85,0.5)', background: 'rgba(129,140,248,0.03)' }}
+        style={{ borderBottom: '1px solid rgba(51,65,85,0.35)' }}
       >
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
-            <h3 className="text-white font-bold text-lg leading-tight">{project.title}</h3>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-mono px-2 py-0.5 rounded text-slate-500"
+                style={{ background: 'rgba(51,65,85,0.4)', border: '1px solid rgba(71,85,105,0.3)' }}>
+                side project
+              </span>
+            </div>
+            <h3 className="text-slate-200 font-bold text-lg leading-tight">{project.title}</h3>
             <p className="text-slate-500 text-sm font-mono mt-0.5">{project.subtitle}</p>
           </div>
           <span
