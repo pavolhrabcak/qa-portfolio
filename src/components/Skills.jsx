@@ -95,11 +95,11 @@ export default function Skills() {
         </div>
 
         {/* Legend */}
-        <div className="text-center mt-6 mb-16">
+        <div className="flex justify-center items-center gap-2 flex-wrap mt-6 mb-16">
           {TIERS.map(t => (
             <span
               key={t.label}
-              className="inline-block text-xs font-mono px-2 py-0.5 rounded mx-2 my-1"
+              className="text-xs font-mono px-2 py-0.5 rounded"
               style={{ color: t.color, background: t.bg, border: `1px solid ${t.border}` }}
             >
               {t.label}
