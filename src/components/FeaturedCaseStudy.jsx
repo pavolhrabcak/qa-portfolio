@@ -187,6 +187,103 @@ export default function FeaturedCaseStudy() {
                 ))}
               </div>
             </div>
+
+            {/* Framework Architecture */}
+            <div className="mt-8">
+              <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-6">
+                Framework Architecture
+              </div>
+
+              {/* Flow diagram */}
+              <div className="flex flex-col items-center gap-0 mb-8">
+                {[
+                  {
+                    label: 'Playwright E2E',
+                    sub: '450+ Automated Tests',
+                    color: '#10b981',
+                    bg: 'rgba(16,185,129,0.08)',
+                    border: 'rgba(16,185,129,0.3)',
+                    items: [],
+                  },
+                  {
+                    label: 'Test Layers',
+                    color: '#818cf8',
+                    bg: 'rgba(129,140,248,0.08)',
+                    border: 'rgba(129,140,248,0.3)',
+                    items: ['RBAC Testing', 'E2E Workflows', 'API Validation', 'Accessibility Checks', 'UI & Navigation Testing'],
+                  },
+                  {
+                    label: 'Page Objects',
+                    color: '#a78bfa',
+                    bg: 'rgba(167,139,250,0.08)',
+                    border: 'rgba(167,139,250,0.3)',
+                    items: ['Text Translate', 'Document Translate', 'Translation History', 'Billing', 'Usage Dashboard', 'User Administration', 'Feedback Evaluation'],
+                  },
+                  {
+                    label: 'Shared Core',
+                    color: '#fbbf24',
+                    bg: 'rgba(251,191,36,0.08)',
+                    border: 'rgba(251,191,36,0.3)',
+                    items: ['Fixtures', 'Role Management', 'API Mocking', 'Test Data Builders', 'Download Utilities', 'Date Helpers'],
+                  },
+                  {
+                    label: 'Azure DevOps CI/CD',
+                    sub: 'Automated Regression Runs',
+                    color: '#f87171',
+                    bg: 'rgba(248,113,113,0.08)',
+                    border: 'rgba(248,113,113,0.3)',
+                    items: [],
+                  },
+                ].map((layer, i) => (
+                  <div key={layer.label} className="w-full flex flex-col items-center">
+                    <div
+                      className="w-full max-w-lg rounded-xl px-5 py-3"
+                      style={{ background: layer.bg, border: `1px solid ${layer.border}` }}
+                    >
+                      <div className="text-sm font-bold font-mono text-center" style={{ color: layer.color }}>{layer.label}</div>
+                      {layer.sub && <div className="text-xs text-slate-400 text-center mt-0.5">{layer.sub}</div>}
+                      {layer.items.length > 0 && (
+                        <div className="flex flex-wrap justify-center gap-1.5 mt-2">
+                          {layer.items.map(item => (
+                            <span key={item} className="text-xs font-mono text-slate-300 px-2 py-0.5 rounded"
+                              style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.3)' }}>
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    {i < 4 && (
+                      <div className="flex flex-col items-center py-1">
+                        <div className="w-px h-4" style={{ background: 'rgba(100,116,139,0.5)' }} />
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                          <path d="M1 1L5 5L9 1" stroke="rgba(100,116,139,0.5)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Highlights */}
+              <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-3 mt-2">
+                Framework Highlights
+              </div>
+              <ul className="space-y-2">
+                {[
+                  'Designed a layered Playwright + TypeScript framework using Page Objects, fixtures, and shared utilities to support long-term maintainability.',
+                  'Implemented role-based test coverage for multiple user roles and unauthorized access scenarios.',
+                  'Combined UI validation, API mocking, accessibility testing, and end-to-end workflows within a single automation solution.',
+                  'Built reusable test infrastructure that enabled consistent coverage across translation, reporting, administration, billing, and feedback modules.',
+                  'Applied risk-based automation principles, focusing on high-value scenarios while keeping unstable third-party-dependent flows under targeted manual regression.',
+                ].map((h, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-slate-300">
+                    <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

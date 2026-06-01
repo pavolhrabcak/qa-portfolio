@@ -207,7 +207,7 @@ export const caseStudy = {
     "Intentionally excluded third-party-dependent scenarios (e.g. large file uploads, Azure translation service) from automation due to execution cost and instability risks — maintained as targeted manual regression.",
   ],
   comparison: [
-    { label: 'E2E Coverage',           before: 'Limited',        after: '450+ automated tests',        delta: 'Full regression'        },
+    { label: 'E2E Coverage',           before: 'Limited',        after: '450+ automated tests',        delta: 'Core paths covered'     },
     { label: 'Regression Execution',   before: 'Mostly manual',  after: 'Core workflows automated',    delta: '~90% · risk-based'  },
     { label: 'Role Coverage',          before: 'Partial',        after: 'Complete RBAC validation',    delta: '4 roles covered'        },
     { label: 'API Dependency',         before: 'High',           after: 'Extensively mocked',          delta: 'Low flakiness'          },
