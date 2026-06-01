@@ -103,7 +103,7 @@ export default function HowIWork() {
                 <h3 className="text-white font-bold text-base leading-tight">{step.title}</h3>
 
                 {/* Description */}
-                <p className="text-slate-400 text-sm leading-relaxed flex-1">{step.description}</p>
+                <p className="text-slate-400 text-base leading-relaxed flex-1">{step.description}</p>
               </div>
 
               {/* Arrow connector (between steps, not after last) */}

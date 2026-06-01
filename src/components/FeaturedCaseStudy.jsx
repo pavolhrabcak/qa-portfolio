@@ -82,7 +82,7 @@ export default function FeaturedCaseStudy() {
               </div>
             )}
 
-            <div className="grid lg:grid-cols-2 gap-8 mb-8">
+            <div className="flex flex-col gap-8 mb-8">
               {/* Challenge */}
               <div>
                 <h3

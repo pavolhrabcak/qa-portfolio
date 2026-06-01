@@ -17,7 +17,7 @@ function ProjectCard({ project, index, visible }) {
     <div
       className="glass card-hover rounded-2xl overflow-hidden flex flex-col"
       style={{
-        border: '1px solid rgba(129,140,248,0.15)',
+        border: '1px solid rgba(71,85,105,0.4)',
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(24px)',
         transition: `opacity 0.4s ease ${index * 150}ms, transform 0.4s ease ${index * 150}ms`,
@@ -106,8 +106,11 @@ export default function PersonalProjects() {
     <section id="projects" className="py-36 px-6">
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="05" title="Personal Projects" />
+        <p className="text-slate-500 text-sm font-mono mt-3 mb-12">
+          Side projects — built independently outside of professional work.
+        </p>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} visible={visible} />
           ))}
