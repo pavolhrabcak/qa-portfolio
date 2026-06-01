@@ -95,7 +95,7 @@ export default function Skills() {
         </div>
 
         {/* Legend */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-6 mb-16 max-w-xs sm:max-w-none mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-6 mb-16 max-w-xs mx-auto">
           {TIERS.map(t => (
             <span
               key={t.label}
