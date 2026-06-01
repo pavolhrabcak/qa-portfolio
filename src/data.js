@@ -45,6 +45,8 @@ export const skills = [
       { name: 'Page Object Model (POM)',    level: 85 },
       { name: 'BDD / Cucumber / Gherkin',  level: 70 },
       { name: 'Web Automation Locators',    level: 88 },
+      { name: 'E2E Testing',               level: 88 },
+      { name: 'RBAC Testing',              level: 85 },
       { name: 'CI Integration',             level: 70 },
     ],
   },
