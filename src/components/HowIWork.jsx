@@ -66,7 +66,7 @@ export default function HowIWork() {
   const visible = useInView(ref)
 
   return (
-    <section id="how-i-work" className="py-28 px-6">
+    <section id="how-i-work" className="py-36 px-6">
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="02" title="How I Work" />
 
@@ -103,7 +103,7 @@ export default function HowIWork() {
                 <h3 className="text-white font-bold text-base leading-tight">{step.title}</h3>
 
                 {/* Description */}
-                <p className="text-slate-400 text-xs leading-relaxed flex-1">{step.description}</p>
+                <p className="text-slate-400 text-sm leading-relaxed flex-1">{step.description}</p>
               </div>
 
               {/* Arrow connector (between steps, not after last) */}

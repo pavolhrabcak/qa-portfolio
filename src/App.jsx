@@ -21,8 +21,8 @@ function Portfolio() {
       <About />
       <HowIWork />
       <Skills />
-      <Experience />
       <FeaturedCaseStudy />
+      <Experience />
       <PersonalProjects />
       <Training />
       <Contact />

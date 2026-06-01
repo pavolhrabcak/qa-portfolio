@@ -31,7 +31,7 @@ function ProjectCard({ project, index, visible }) {
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
             <h3 className="text-white font-bold text-lg leading-tight">{project.title}</h3>
-            <p className="text-slate-500 text-xs font-mono mt-0.5">{project.subtitle}</p>
+            <p className="text-slate-500 text-sm font-mono mt-0.5">{project.subtitle}</p>
           </div>
           <span
             className="text-xs font-mono px-2.5 py-1 rounded-full shrink-0"
@@ -103,7 +103,7 @@ export default function PersonalProjects() {
   const visible = useInView(ref)
 
   return (
-    <section id="projects" className="py-28 px-6">
+    <section id="projects" className="py-36 px-6">
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="05" title="Personal Projects" />
 

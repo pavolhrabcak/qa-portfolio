@@ -13,7 +13,7 @@ export default function Training() {
   const visible = useInView(ref)
 
   return (
-    <section id="training" className="py-28 px-6">
+    <section id="training" className="py-36 px-6">
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="06" title="Trainings & Certifications" />
 

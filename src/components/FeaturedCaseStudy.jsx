@@ -7,7 +7,7 @@ export default function FeaturedCaseStudy() {
   const visible = useInView(ref)
 
   return (
-    <section id="case-study" className="py-28 px-6">
+    <section id="case-study" className="py-36 px-6">
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
 
         {/* Section label */}

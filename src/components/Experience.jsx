@@ -140,7 +140,7 @@ export default function Experience() {
   const [featured, ...rest] = experience
 
   return (
-    <section id="experience" className="py-28 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
+    <section id="experience" className="py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="04" title="Experience" />
 
