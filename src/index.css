@@ -54,6 +54,11 @@ body {
   pointer-events: none;
 }
 
+/* Section divider */
+section + section {
+  border-top: 1px solid rgba(51, 65, 85, 0.4);
+}
+
 /* Scroll fade-in */
 .reveal {
   opacity: 0;

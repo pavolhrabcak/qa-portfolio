@@ -7,7 +7,7 @@ export default function FeaturedCaseStudy() {
   const visible = useInView(ref)
 
   return (
-    <section id="case-study" className="py-36 px-6">
+    <section id="case-study" className="py-36 px-6" style={{ background: 'rgba(251,191,36,0.03)', borderTop: '1px solid rgba(251,191,36,0.08)', borderBottom: '1px solid rgba(251,191,36,0.08)' }}>
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
 
         {/* Section label */}
@@ -91,7 +91,7 @@ export default function FeaturedCaseStudy() {
                 >
                   The Challenge
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{caseStudy.challenge}</p>
+                <p className="text-slate-400 text-base leading-relaxed">{caseStudy.challenge}</p>
               </div>
               {/* Approach */}
               <div>
@@ -103,7 +103,7 @@ export default function FeaturedCaseStudy() {
                 </h3>
                 <ul className="space-y-1.5">
                   {caseStudy.approach.map((item, i) => (
-                    <li key={i} className="flex gap-2 text-slate-400 text-sm leading-relaxed">
+                    <li key={i} className="flex gap-2 text-slate-400 text-base leading-relaxed">
                       <span className="text-indigo-400 shrink-0 mt-0.5">→</span>
                       <span>{item}</span>
                     </li>
@@ -166,7 +166,7 @@ export default function FeaturedCaseStudy() {
               <span className="text-emerald-400 text-lg shrink-0 mt-0.5">★</span>
               <div>
                 <div className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 mb-1">Business Impact</div>
-                <p className="text-slate-300 text-sm leading-relaxed">{caseStudy.impact}</p>
+                <p className="text-slate-300 text-base leading-relaxed">{caseStudy.impact}</p>
               </div>
             </div>
 
@@ -277,7 +277,7 @@ export default function FeaturedCaseStudy() {
                   'Built reusable test infrastructure that enabled consistent coverage across translation, reporting, administration, billing, and feedback modules.',
                   'Applied risk-based automation principles, focusing on high-value scenarios while keeping unstable third-party-dependent flows under targeted manual regression.',
                 ].map((h, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-slate-300">
+                  <li key={i} className="flex gap-2 text-base text-slate-300">
                     <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
                     {h}
                   </li>

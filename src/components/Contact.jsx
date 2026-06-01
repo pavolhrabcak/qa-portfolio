@@ -1,7 +1,66 @@
 import { useRef, useState } from 'react'
-import { personalInfo } from '../data'
+import { personalInfo, training } from '../data'
 import { useInView } from '../hooks/useInView'
 import { SectionHeader } from './About'
+
+const typeStyle = {
+  Certification: { bg: 'rgba(234,179,8,0.08)', border: 'rgba(234,179,8,0.3)', color: '#fde047' },
+  Course:        { bg: 'rgba(59,130,246,0.08)', border: 'rgba(59,130,246,0.3)', color: '#93c5fd' },
+}
+
+function TrainingModal({ onClose }) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }}
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-2xl rounded-2xl overflow-hidden"
+        style={{ background: 'rgba(15,23,42,0.98)', border: '1px solid rgba(51,65,85,0.7)' }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Modal header */}
+        <div className="flex items-center justify-between px-6 py-4" style={{ borderBottom: '1px solid rgba(51,65,85,0.5)' }}>
+          <span className="text-white font-bold text-lg">Trainings & Certifications</span>
+          <button onClick={onClose} className="text-slate-400 hover:text-white transition-colors text-xl leading-none">✕</button>
+        </div>
+
+        {/* Table */}
+        <div className="px-6 py-5 max-h-[70vh] overflow-y-auto">
+          <div className="grid grid-cols-12 py-2 text-xs font-mono font-semibold uppercase tracking-widest mb-1 text-slate-500">
+            <span className="col-span-1">Year</span>
+            <span className="col-span-7">Title</span>
+            <span className="col-span-2">Provider</span>
+            <span className="col-span-2 text-right">Type</span>
+          </div>
+          <div className="space-y-1">
+            {training.map((item, i) => {
+              const style = typeStyle[item.type] || typeStyle.Course
+              return (
+                <div
+                  key={i}
+                  className="grid grid-cols-12 items-center py-3 text-sm rounded-lg"
+                  style={{ borderBottom: i < training.length - 1 ? '1px solid rgba(51,65,85,0.25)' : 'none' }}
+                >
+                  <span className="col-span-1 font-mono text-emerald-400 font-semibold">{item.year}</span>
+                  <span className="col-span-7 text-white font-medium pr-4">{item.title}</span>
+                  <span className="col-span-2 text-slate-400 text-xs">{item.provider}</span>
+                  <div className="col-span-2 flex justify-end">
+                    <span className="text-xs px-2 py-0.5 rounded font-mono"
+                      style={{ background: style.bg, border: `1px solid ${style.border}`, color: style.color }}>
+                      {item.type}
+                    </span>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const PRIORITIES = [
   { id: 'p1', label: 'P1 · Critical', sub: 'Urgent, ASAP',          color: '#f87171' },
@@ -53,6 +112,7 @@ export default function Contact() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
+  const [showTraining, setShowTraining] = useState(false)
 
   const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }))
 
@@ -89,7 +149,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
-        <SectionHeader index="07" title="Get In Touch" />
+        <SectionHeader index="06" title="Get In Touch" />
 
         {/* Bug report frame */}
         <div
@@ -274,8 +334,14 @@ export default function Contact() {
           <a href={`mailto:${personalInfo.email}`} className="text-emerald-400 hover:underline">{personalInfo.email}</a>
           {' · '}
           <a href={`https://${personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400 transition-colors">LinkedIn</a>
+          {' · '}
+          <button onClick={() => setShowTraining(true)} className="text-slate-400 hover:text-emerald-400 transition-colors">
+            Trainings & Certifications →
+          </button>
         </p>
       </div>
+
+      {showTraining && <TrainingModal onClose={() => setShowTraining(false)} />}
     </section>
   )
 }

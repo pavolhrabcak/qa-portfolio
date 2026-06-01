@@ -7,7 +7,6 @@ import Experience from './components/Experience'
 import FeaturedCaseStudy from './components/FeaturedCaseStudy'
 import HowIWork from './components/HowIWork'
 import PersonalProjects from './components/PersonalProjects'
-import Training from './components/Training'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -24,7 +23,6 @@ function Portfolio() {
       <FeaturedCaseStudy />
       <Experience />
       <PersonalProjects />
-      <Training />
       <Contact />
       <Footer />
       <ScrollToTop />
