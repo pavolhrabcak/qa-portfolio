@@ -236,7 +236,7 @@ export default function FeaturedCaseStudy() {
                   },
                   {
                     label: 'Azure DevOps CI/CD',
-                    sub: 'Automated Regression Runs',
+                    sub: 'Automated Regression Runs with notifications',
                     color: '#f87171',
                     bg: 'rgba(248,113,113,0.08)',
                     border: 'rgba(248,113,113,0.3)',
