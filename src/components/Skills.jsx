@@ -27,7 +27,7 @@ function TestCase({ name, level, index, visible }) {
     >
       <div className="flex items-center gap-2.5 min-w-0">
         <span className="text-sm shrink-0 font-mono" style={{ color: '#10b981' }}>✓</span>
-        <span className="text-slate-300 text-sm truncate">{name}</span>
+        <span className="text-slate-300 text-sm">{name}</span>
       </div>
       <span
         className="text-xs font-mono px-2 py-0.5 rounded shrink-0"
@@ -119,7 +119,7 @@ export default function Skills() {
           {technologies.map((cat) => (
             <div key={cat.category} className="glass card-hover p-5 rounded-xl">
               <h3
-                className="text-xs font-semibold uppercase tracking-widest mb-3"
+                className="text-xs font-semibold uppercase tracking-widest mb-4"
                 style={{ color: '#64748b' }}
               >
                 {cat.category}
@@ -128,7 +128,7 @@ export default function Skills() {
                 {cat.items.map(item => (
                   <span
                     key={item}
-                    className={`px-2.5 py-1 rounded-md text-xs font-mono transition-transform duration-150 hover:-translate-y-0.5 cursor-default ${cat.color}`}
+                    className={`px-2.5 py-1 rounded-md text-sm font-mono transition-transform duration-150 hover:-translate-y-0.5 cursor-default ${cat.color}`}
                     style={{ background: cat.bg, border: `1px solid ${cat.border}` }}
                   >
                     {item}

@@ -28,29 +28,25 @@ function TrainingModal({ onClose }) {
 
         {/* Table */}
         <div className="px-6 py-5 max-h-[70vh] overflow-y-auto">
-          <div className="grid grid-cols-12 py-2 text-xs font-mono font-semibold uppercase tracking-widest mb-1 text-slate-500">
-            <span className="col-span-1">Year</span>
-            <span className="col-span-7">Title</span>
-            <span className="col-span-2">Provider</span>
-            <span className="col-span-2 text-right">Type</span>
-          </div>
           <div className="space-y-1">
             {training.map((item, i) => {
               const style = typeStyle[item.type] || typeStyle.Course
               return (
                 <div
                   key={i}
-                  className="grid grid-cols-12 items-center py-3 text-sm rounded-lg"
+                  className="py-3 text-sm"
                   style={{ borderBottom: i < training.length - 1 ? '1px solid rgba(51,65,85,0.25)' : 'none' }}
                 >
-                  <span className="col-span-1 font-mono text-emerald-400 font-semibold">{item.year}</span>
-                  <span className="col-span-7 text-white font-medium pr-4">{item.title}</span>
-                  <span className="col-span-2 text-slate-400 text-xs">{item.provider}</span>
-                  <div className="col-span-2 flex justify-end">
-                    <span className="text-xs px-2 py-0.5 rounded font-mono"
+                  <div className="flex items-start justify-between gap-3 mb-1">
+                    <span className="text-white font-medium">{item.title}</span>
+                    <span className="text-xs px-2 py-0.5 rounded font-mono shrink-0"
                       style={{ background: style.bg, border: `1px solid ${style.border}`, color: style.color }}>
                       {item.type}
                     </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-emerald-400 font-semibold text-xs">{item.year}</span>
+                    <span className="text-slate-500 text-xs">{item.provider}</span>
                   </div>
                 </div>
               )

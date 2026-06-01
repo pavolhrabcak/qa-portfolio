@@ -39,10 +39,10 @@ function MetricCell({ line1, line2, color, delay }) {
       className="px-5 py-5 transition-opacity duration-500 flex flex-col justify-center"
       style={{ opacity: visible ? 1 : 0, background: 'rgba(10,15,30,0.5)' }}
     >
-      <div className="text-lg font-bold font-mono leading-tight" style={{ color }}>
+      <div className="text-sm md:text-lg font-bold font-mono leading-tight" style={{ color }}>
         {line1}
       </div>
-      <div className="text-lg font-bold font-mono leading-tight text-slate-300">
+      <div className="text-sm md:text-lg font-bold font-mono leading-tight text-slate-300">
         {line2}
       </div>
     </div>
