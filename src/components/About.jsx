@@ -30,9 +30,9 @@ export default function About() {
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="01" title="About Me" />
 
-        <div className="grid md:grid-cols-2 gap-14 items-start mt-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-14 items-start mt-12">
           {/* Text side */}
-          <div>
+          <div className="overflow-hidden">
             <p className="text-slate-300 text-lg leading-relaxed mb-8">
               <HighlightedText text={personalInfo.summary} />
             </p>
@@ -54,8 +54,8 @@ export default function About() {
           {/* Stats side */}
           <div className="grid grid-cols-2 gap-4">
             {personalInfo.stats.map((stat, i) => (
-              <div key={i} className="glass card-hover p-6 text-center rounded-xl">
-                <div className="text-4xl md:text-5xl font-extrabold gradient-text mb-2 leading-none">
+              <div key={i} className="glass card-hover p-4 md:p-6 text-center rounded-xl">
+                <div className="text-3xl md:text-5xl font-extrabold gradient-text mb-2 leading-none">
                   {stat.value}
                 </div>
                 <div className="text-slate-400 text-sm">{stat.label}</div>
