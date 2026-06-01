@@ -117,9 +117,9 @@ export default function FeaturedCaseStudy() {
               className="rounded-xl overflow-hidden mb-8"
               style={{ border: '1px solid rgba(51,65,85,0.5)' }}
             >
-              {/* Results header */}
+              {/* Results header — hidden on mobile */}
               <div
-                className="grid grid-cols-4 px-5 py-3 text-xs font-mono font-semibold uppercase tracking-wider"
+                className="hidden sm:grid grid-cols-4 px-5 py-3 text-xs font-mono font-semibold uppercase tracking-wider"
                 style={{ background: 'rgba(30,41,59,0.8)', borderBottom: '1px solid rgba(51,65,85,0.5)', color: '#64748b' }}
               >
                 <span>Metric</span>
@@ -131,7 +131,7 @@ export default function FeaturedCaseStudy() {
               {caseStudy.comparison.map((row, i) => (
                 <div
                   key={row.label}
-                  className="grid grid-cols-4 px-5 py-3.5 items-center text-sm"
+                  className="px-5 py-3.5 text-sm"
                   style={{
                     borderBottom: i < caseStudy.comparison.length - 1 ? '1px solid rgba(51,65,85,0.3)' : 'none',
                     opacity: visible ? 1 : 0,
@@ -139,21 +139,29 @@ export default function FeaturedCaseStudy() {
                     transition: `opacity 0.4s ease ${i * 100 + 200}ms, transform 0.4s ease ${i * 100 + 200}ms`,
                   }}
                 >
-                  <span className="text-slate-300 font-medium">{row.label}</span>
-                  <span className="text-slate-500 font-mono line-through decoration-slate-600">{row.before}</span>
-                  <span className="text-white font-mono font-semibold">{row.after}</span>
-                  <span>
-                    <span
-                      className="text-xs font-mono font-bold px-2.5 py-1 rounded-full"
-                      style={{
-                        color: row.up ? '#10b981' : '#10b981',
-                        background: 'rgba(16,185,129,0.1)',
-                        border: '1px solid rgba(16,185,129,0.25)',
-                      }}
-                    >
+                  {/* Desktop: 4-column row */}
+                  <div className="hidden sm:grid grid-cols-4 items-center">
+                    <span className="text-slate-300 font-medium">{row.label}</span>
+                    <span className="text-slate-500 font-mono line-through decoration-slate-600">{row.before}</span>
+                    <span className="text-white font-mono font-semibold">{row.after}</span>
+                    <span>
+                      <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full"
+                        style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)' }}>
+                        {row.delta}
+                      </span>
+                    </span>
+                  </div>
+                  {/* Mobile: stacked layout */}
+                  <div className="sm:hidden flex items-start justify-between gap-3">
+                    <div>
+                      <div className="text-slate-300 font-medium mb-1">{row.label}</div>
+                      <div className="text-white font-mono font-semibold">{row.after}</div>
+                    </div>
+                    <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full shrink-0"
+                      style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)' }}>
                       {row.delta}
                     </span>
-                  </span>
+                  </div>
                 </div>
               ))}
             </div>
