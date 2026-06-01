@@ -215,7 +215,7 @@ export const caseStudy = {
     { label: 'Test Architecture',      before: 'Ad-hoc',         after: 'Reusable test architecture',  delta: 'Scalable & documented'  },
   ],
   impact:
-    "Reduced manual regression effort by approximately 90% while maintaining high release confidence across translation, reporting, administration, and RBAC workflows. Established reusable automation patterns, testing standards, and documentation that enable future contributors to expand coverage efficiently with minimal maintenance overhead.",
+    "Reduced manual regression effort by approximately 90% while maintaining high release confidence across translation, reporting, administration, and RBAC workflows. Subsequent performance optimization of the automated suite further reduced execution time from ~55 to ~15 minutes, enabling rapid feedback on critical user journeys and supporting faster release decisions. Established reusable automation patterns, testing standards, and documentation that enable future contributors to expand coverage efficiently with minimal maintenance overhead.",
   tech: ['Playwright', 'TypeScript', 'Page Object Model', 'API Mocking', 'axe-core', 'GitHub Actions', 'RBAC Testing', 'E2E Automation', 'Accessibility Testing', 'AI-Assisted Development'],
 }
 
