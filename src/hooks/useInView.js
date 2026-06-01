@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export function useInView(ref, threshold = 0.12) {
+export function useInView(ref, threshold = 0.05) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {

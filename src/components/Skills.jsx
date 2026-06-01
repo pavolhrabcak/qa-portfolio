@@ -62,11 +62,11 @@ export default function Skills() {
                   className="px-5 py-4 flex items-center justify-between border-b"
                   style={{ borderColor: group.accent.border, background: group.accent.glow }}
                 >
-                  <div className="flex items-center gap-2.5">
-                    <span className="text-lg">{group.emoji}</span>
-                    <div>
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <span className="text-lg shrink-0">{group.emoji}</span>
+                    <div className="min-w-0">
                       <span className="text-white font-semibold text-sm">{group.category}</span>
-                      <span className="text-slate-500 text-xs font-mono ml-2">suite</span>
+                      <span className="text-slate-500 text-xs font-mono ml-2 hidden sm:inline">suite</span>
                     </div>
                   </div>
                   <span
