@@ -178,24 +178,6 @@ export default function FeaturedCaseStudy() {
               </div>
             </div>
 
-            {/* Tech used */}
-            <div>
-              <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-3">
-                Technologies Used
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {caseStudy.tech.map(t => (
-                  <span
-                    key={t}
-                    className="text-xs font-mono px-2.5 py-1 rounded text-slate-300"
-                    style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.4)' }}
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
             {/* Framework Architecture */}
             <div className="mt-8">
               <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-6">
@@ -273,24 +255,24 @@ export default function FeaturedCaseStudy() {
                 ))}
               </div>
 
-              {/* Highlights */}
-              <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-3 mt-2">
-                Framework Highlights
+            </div>
+
+            {/* Tech used */}
+            <div>
+              <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-3">
+                Technologies Used
               </div>
-              <ul className="space-y-2">
-                {[
-                  'Designed a layered Playwright + TypeScript framework using Page Objects, fixtures, and shared utilities to support long-term maintainability.',
-                  'Implemented role-based test coverage for multiple user roles and unauthorized access scenarios.',
-                  'Combined UI validation, API mocking, accessibility testing, and end-to-end workflows within a single automation solution.',
-                  'Built reusable test infrastructure that enabled consistent coverage across translation, reporting, administration, billing, and feedback modules.',
-                  'Applied risk-based automation principles, focusing on high-value scenarios while keeping unstable third-party-dependent flows under targeted manual regression.',
-                ].map((h, i) => (
-                  <li key={i} className="flex gap-2 text-base text-slate-300">
-                    <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
-                    {h}
-                  </li>
+              <div className="flex flex-wrap gap-2">
+                {caseStudy.tech.map(t => (
+                  <span
+                    key={t}
+                    className="text-xs font-mono px-2.5 py-1 rounded text-slate-300"
+                    style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.4)' }}
+                  >
+                    {t}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
