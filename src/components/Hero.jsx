@@ -137,8 +137,13 @@ export default function Hero() {
             {personalInfo.available && (
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8 text-sm font-mono"
                 style={{ borderColor: 'rgba(16,185,129,0.35)', background: 'rgba(16,185,129,0.06)', color: '#6ee7b7', maxWidth: '100%' }}>
-                <span className="text-center">
+                {/* Mobile: 2 lines */}
+                <span className="sm:hidden text-center">
                   <span className="inline-flex items-center gap-2"><span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0" />Available</span><br />Freelance & Full-time
+                </span>
+                {/* Desktop: 1 line */}
+                <span className="hidden sm:inline-flex items-center gap-2">
+                  <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0" />Available · Freelance & Full-time
                 </span>
               </div>
             )}
