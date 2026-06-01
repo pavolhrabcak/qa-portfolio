@@ -122,12 +122,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
       {/* Ambient orbs */}
-      <div className="orb absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full"
-        style={{ background: 'radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 70%)' }} />
-      <div className="orb orb-2 absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full"
-        style={{ background: 'radial-gradient(circle, rgba(129,140,248,0.10) 0%, transparent 70%)' }} />
-      <div className="orb orb-3 absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full -translate-x-1/2 -translate-y-1/2"
-        style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%)' }} />
+      <div className="orb absolute top-1/4 left-1/4 rounded-full"
+        style={{ width: 'min(500px, 80vw)', height: 'min(500px, 80vw)', background: 'radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 70%)' }} />
+      <div className="orb orb-2 absolute bottom-1/3 right-1/4 rounded-full"
+        style={{ width: 'min(400px, 70vw)', height: 'min(400px, 70vw)', background: 'radial-gradient(circle, rgba(129,140,248,0.10) 0%, transparent 70%)' }} />
+      <div className="orb orb-3 absolute top-1/2 left-1/2 rounded-full -translate-x-1/2 -translate-y-1/2"
+        style={{ width: 'min(300px, 60vw)', height: 'min(300px, 60vw)', background: 'radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%)' }} />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
