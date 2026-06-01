@@ -71,6 +71,12 @@ section + section {
   border-top: 1px solid rgba(51, 65, 85, 0.4);
 }
 
+/* Prevent horizontal overflow in all sections */
+section {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* Scroll fade-in */
 .reveal {
   opacity: 0;
