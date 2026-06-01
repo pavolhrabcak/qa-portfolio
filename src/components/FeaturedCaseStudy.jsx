@@ -157,8 +157,8 @@ export default function FeaturedCaseStudy() {
                       <div className="text-slate-300 font-medium mb-1">{row.label}</div>
                       <div className="text-white font-mono font-semibold">{row.after}</div>
                     </div>
-                    <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full shrink-0"
-                      style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)' }}>
+                    <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-lg text-right"
+                      style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)', maxWidth: '45%' }}>
                       {row.delta}
                     </span>
                   </div>
