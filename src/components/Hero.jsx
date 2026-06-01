@@ -135,9 +135,9 @@ export default function Hero() {
           {/* Left — text content */}
           <div className="text-center lg:text-left">
             {personalInfo.available && (
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8 text-sm font-mono"
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8 text-sm font-mono whitespace-nowrap"
                 style={{ borderColor: 'rgba(16,185,129,0.35)', background: 'rgba(16,185,129,0.06)', color: '#6ee7b7' }}>
-                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0" />
                 Available for freelance & full-time
               </div>
             )}

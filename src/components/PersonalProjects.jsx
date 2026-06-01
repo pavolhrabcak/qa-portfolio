@@ -110,7 +110,7 @@ export default function PersonalProjects() {
   const visible = useInView(ref)
 
   return (
-    <section id="projects" className="py-36 px-6">
+    <section id="projects" className="py-20 md:py-36 px-6">
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="05" title="Personal Projects" />
         <p className="text-slate-500 text-sm font-mono mt-3 mb-12">

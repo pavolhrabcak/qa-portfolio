@@ -44,7 +44,7 @@ export default function Skills() {
   const visible = useInView(ref)
 
   return (
-    <section id="skills" className="py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
+    <section id="skills" className="py-20 md:py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="03" title="Skills & Stack" />
 

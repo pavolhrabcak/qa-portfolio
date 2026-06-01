@@ -26,7 +26,7 @@ export default function About() {
   const visible = useInView(ref)
 
   return (
-    <section id="about" className="py-36 px-6">
+    <section id="about" className="py-20 md:py-36 px-6">
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="01" title="About Me" />
 

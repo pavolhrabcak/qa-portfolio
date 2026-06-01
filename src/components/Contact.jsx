@@ -143,7 +143,7 @@ export default function Contact() {
   const focusStyle = { borderColor: 'rgba(16,185,129,0.6)' }
 
   return (
-    <section id="contact" className="py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
+    <section id="contact" className="py-20 md:py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="06" title="Get In Touch" />
 

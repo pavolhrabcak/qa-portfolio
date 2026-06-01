@@ -7,7 +7,7 @@ export default function FeaturedCaseStudy() {
   const visible = useInView(ref)
 
   return (
-    <section id="case-study" className="py-36 px-6" style={{ background: 'rgba(251,191,36,0.03)', borderTop: '1px solid rgba(251,191,36,0.08)', borderBottom: '1px solid rgba(251,191,36,0.08)' }}>
+    <section id="case-study" className="py-20 md:py-36 px-6" style={{ background: 'rgba(251,191,36,0.03)', borderTop: '1px solid rgba(251,191,36,0.08)', borderBottom: '1px solid rgba(251,191,36,0.08)' }}>
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
 
         {/* Section label */}

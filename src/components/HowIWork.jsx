@@ -66,7 +66,7 @@ export default function HowIWork() {
   const visible = useInView(ref)
 
   return (
-    <section id="how-i-work" className="py-36 px-6">
+    <section id="how-i-work" className="py-20 md:py-36 px-6">
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="02" title="How I Work" />
 
