@@ -25,10 +25,12 @@ export const skills = [
     items: [
       { name: 'Functional Testing',         level: 95 },
       { name: 'Regression Testing',         level: 92 },
-      { name: 'Exploratory Testing',        level: 90 },
+      { name: 'Integration Testing',        level: 85 },
       { name: 'User Acceptance Testing',    level: 88 },
       { name: 'Smoke & Sanity Testing',     level: 95 },
       { name: 'Compatibility Testing',      level: 82 },
+      { name: 'Exploratory Testing',        level: 90 },
+      { name: 'Ad-Hoc Testing',             level: 88 },
       { name: 'Chrome DevTools',            level: 85 },
     ],
   },
@@ -88,7 +90,7 @@ export const technologies = [
     color: 'text-violet-300',
     bg: 'rgba(139,92,246,0.08)',
     border: 'rgba(139,92,246,0.25)',
-    items: ['VS Code', 'Claude', 'GitHub Copilot', 'Codex'],
+    items: ['VS Code', 'Claude', 'GitHub Copilot', 'Codex', 'MCP Server'],
   },
   {
     category: 'Languages & Data',
