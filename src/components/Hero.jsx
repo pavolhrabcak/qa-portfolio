@@ -133,12 +133,12 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left — text content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left overflow-hidden">
             {personalInfo.available && (
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8 text-sm font-mono whitespace-nowrap"
-                style={{ borderColor: 'rgba(16,185,129,0.35)', background: 'rgba(16,185,129,0.06)', color: '#6ee7b7' }}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8 text-sm font-mono"
+                style={{ borderColor: 'rgba(16,185,129,0.35)', background: 'rgba(16,185,129,0.06)', color: '#6ee7b7', maxWidth: '100%' }}>
                 <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0" />
-                Available for freelance & full-time
+                Available · Freelance & Full-time
               </div>
             )}
 
