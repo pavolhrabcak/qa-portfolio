@@ -168,14 +168,14 @@ export default function FeaturedCaseStudy() {
 
             {/* Impact statement */}
             <div
-              className="rounded-xl px-6 py-4 mb-8 flex gap-3 items-start"
+              className="rounded-xl px-6 py-4 mb-8"
               style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}
             >
-              <span className="text-emerald-400 text-lg shrink-0 mt-0.5">★</span>
-              <div>
-                <div className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 mb-1">Business Impact</div>
-                <p className="text-slate-300 text-base leading-relaxed">{caseStudy.impact}</p>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-emerald-400 text-sm">★</span>
+                <div className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400">Business Impact</div>
               </div>
+              <p className="text-slate-300 text-base leading-relaxed">{caseStudy.impact}</p>
             </div>
 
             {/* Framework Architecture */}
