@@ -180,7 +180,7 @@ export default function FeaturedCaseStudy() {
 
             {/* Framework Architecture */}
             <div className="mt-8">
-              <div className="text-xs font-mono font-semibold uppercase tracking-widest text-slate-500 mb-6">
+              <div className="text-sm font-mono font-semibold uppercase tracking-widest text-slate-400 mb-6">
                 Framework Architecture
               </div>
 
@@ -230,12 +230,12 @@ export default function FeaturedCaseStudy() {
                       className="w-full max-w-lg rounded-xl px-5 py-3"
                       style={{ background: layer.bg, border: `1px solid ${layer.border}` }}
                     >
-                      <div className="text-sm font-bold font-mono text-center" style={{ color: layer.color }}>{layer.label}</div>
-                      {layer.sub && <div className="text-xs text-slate-400 text-center mt-0.5">{layer.sub}</div>}
+                      <div className="text-base font-bold font-mono text-center" style={{ color: layer.color }}>{layer.label}</div>
+                      {layer.sub && <div className="text-sm text-slate-400 text-center mt-0.5">{layer.sub}</div>}
                       {layer.items.length > 0 && (
                         <div className="flex flex-wrap justify-center gap-1.5 mt-2">
                           {layer.items.map(item => (
-                            <span key={item} className="text-xs font-mono text-slate-300 px-2 py-0.5 rounded"
+                            <span key={item} className="text-sm font-mono text-slate-300 px-2 py-0.5 rounded"
                               style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.3)' }}>
                               {item}
                             </span>

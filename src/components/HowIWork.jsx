@@ -126,7 +126,7 @@ export default function HowIWork() {
         </div>
 
         {/* Bottom note */}
-        <p className="text-center text-slate-600 text-xs font-mono mt-10">
+        <p className="text-center text-slate-500 text-sm font-mono mt-10">
           Each step feeds the next — issues caught early cost 10× less to fix
         </p>
       </div>
