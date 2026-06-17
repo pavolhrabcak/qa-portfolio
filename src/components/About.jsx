@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { personalInfo } from '../data'
 import { useInView } from '../hooks/useInView'
-import { SiCypress, SiCucumber, SiPostman, SiJira, SiDolphin } from 'react-icons/si'
+import { SiCypress, SiCucumber, SiPostman, SiGithub, SiDolphin } from 'react-icons/si'
 import { VscAzureDevops } from 'react-icons/vsc'
 import { FaMasksTheater } from 'react-icons/fa6'
 
@@ -11,7 +11,7 @@ const TOOLS = [
   { icon: SiCucumber,     name: 'Cucumber',      color: '#23D96C' },
   { icon: SiPostman,      name: 'Postman',       color: '#FF6C37' },
   { icon: SiDolphin,      name: 'MySQL',         color: '#4479A1' },
-  { icon: SiJira,         name: 'JIRA',          color: '#0052CC' },
+  { icon: SiGithub,       name: 'GitHub',        color: '#ffffff' },
   { icon: VscAzureDevops, name: 'Azure',         color: '#0078D7' },
 ]
 
