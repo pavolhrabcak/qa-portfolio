@@ -25,7 +25,7 @@ export default function FeaturedCaseStudy() {
         <div
           className="rounded-2xl overflow-hidden"
           style={{
-            background: 'rgba(15,23,42,0.6)',
+            background: 'var(--surface-dark)',
             border: '1px solid rgba(251,191,36,0.15)',
             backdropFilter: 'blur(12px)',
           }}
@@ -33,7 +33,7 @@ export default function FeaturedCaseStudy() {
           {/* Card header */}
           <div
             className="px-8 py-6"
-            style={{ borderBottom: '1px solid rgba(51,65,85,0.5)', background: 'rgba(251,191,36,0.03)' }}
+            style={{ borderBottom: '1px solid var(--border-medium)', background: 'rgba(251,191,36,0.03)' }}
           >
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
@@ -43,7 +43,7 @@ export default function FeaturedCaseStudy() {
                     <span
                       key={tag}
                       className="text-xs font-mono px-2.5 py-1 rounded text-slate-400"
-                      style={{ background: 'rgba(51,65,85,0.5)', border: '1px solid rgba(71,85,105,0.4)' }}
+                      style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}
                     >
                       {tag}
                     </span>
@@ -73,7 +73,7 @@ export default function FeaturedCaseStudy() {
                     <span
                       key={s}
                       className="text-xs font-mono px-2.5 py-1 rounded text-slate-300"
-                      style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.4)' }}
+                      style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}
                     >
                       {s}
                     </span>
@@ -115,12 +115,12 @@ export default function FeaturedCaseStudy() {
             {/* Results table */}
             <div
               className="rounded-xl overflow-hidden mb-8"
-              style={{ border: '1px solid rgba(51,65,85,0.5)' }}
+              style={{ border: '1px solid var(--border-medium)' }}
             >
               {/* Results header — hidden on mobile */}
               <div
                 className="hidden sm:grid grid-cols-4 px-5 py-3 text-xs font-mono font-semibold uppercase tracking-wider"
-                style={{ background: 'rgba(30,41,59,0.8)', borderBottom: '1px solid rgba(51,65,85,0.5)', color: '#64748b' }}
+                style={{ background: 'var(--surface-solid)', borderBottom: '1px solid var(--border-medium)', color: '#64748b' }}
               >
                 <span>Metric</span>
                 <span>Before</span>
@@ -133,7 +133,7 @@ export default function FeaturedCaseStudy() {
                   key={row.label}
                   className="px-5 py-3.5 text-sm"
                   style={{
-                    borderBottom: i < caseStudy.comparison.length - 1 ? '1px solid rgba(51,65,85,0.3)' : 'none',
+                    borderBottom: i < caseStudy.comparison.length - 1 ? '1px solid var(--border-subtle)' : 'none',
                     opacity: visible ? 1 : 0,
                     transform: visible ? 'translateX(0)' : 'translateX(-12px)',
                     transition: `opacity 0.4s ease ${i * 100 + 200}ms, transform 0.4s ease ${i * 100 + 200}ms`,
@@ -236,7 +236,7 @@ export default function FeaturedCaseStudy() {
                         <div className="flex flex-wrap justify-center gap-1.5 mt-2">
                           {layer.items.map(item => (
                             <span key={item} className="text-sm font-mono text-slate-300 px-2 py-0.5 rounded"
-                              style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.3)' }}>
+                              style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}>
                               {item}
                             </span>
                           ))}

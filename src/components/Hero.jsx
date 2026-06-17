@@ -37,7 +37,7 @@ function MetricCell({ line1, line2, color, delay }) {
   return (
     <div
       className="px-5 py-5 transition-opacity duration-500 flex flex-col justify-center"
-      style={{ opacity: visible ? 1 : 0, background: 'rgba(10,15,30,0.5)' }}
+      style={{ opacity: visible ? 1 : 0, background: 'var(--metric-cell)' }}
     >
       <div className="text-sm md:text-lg font-bold font-mono leading-tight" style={{ color }}>
         {line1}
@@ -54,17 +54,17 @@ function MetricsWidget() {
     <div
       className="w-full max-w-xs rounded-2xl overflow-hidden"
       style={{
-        background: 'rgba(15,23,42,0.7)',
+        background: 'var(--widget-bg)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
-        border: '1px solid rgba(255,255,255,0.07)',
+        border: '1px solid var(--widget-border)',
         boxShadow: '0 0 60px rgba(16,185,129,0.08), 0 0 100px rgba(99,102,241,0.06)',
       }}
     >
       {/* Header */}
       <div
         className="flex items-center justify-between px-5 py-3.5"
-        style={{ borderBottom: '1px solid rgba(51,65,85,0.5)' }}
+        style={{ borderBottom: '1px solid var(--widget-divider)' }}
       >
         <div className="flex items-center gap-2">
           <span className="text-slate-300 font-mono text-sm font-semibold">QA Dashboard</span>
@@ -76,7 +76,7 @@ function MetricsWidget() {
       </div>
 
       {/* Metrics 2×2 grid */}
-      <div className="grid grid-cols-2" style={{ gap: '1px', background: 'rgba(51,65,85,0.3)' }}>
+      <div className="grid grid-cols-2" style={{ gap: '1px', background: 'var(--metric-grid)' }}>
         {METRICS.map(m => (
           <MetricCell key={m.line1} {...m} />
         ))}
@@ -85,7 +85,7 @@ function MetricsWidget() {
       {/* Tech stack row */}
       <div
         className="px-5 py-3.5"
-        style={{ borderTop: '1px solid rgba(51,65,85,0.5)' }}
+        style={{ borderTop: '1px solid var(--widget-divider)' }}
       >
         <div className="text-xs font-mono text-slate-500 tracking-wide">
           Playwright · TypeScript · Azure DevOps
@@ -95,7 +95,7 @@ function MetricsWidget() {
       {/* Activity sparkline (decorative) */}
       <div
         className="px-5 py-3"
-        style={{ borderTop: '1px solid rgba(51,65,85,0.3)' }}
+        style={{ borderTop: '1px solid var(--border-subtle)' }}
       >
         <div className="flex items-end gap-1 h-8">
           {[3,5,4,7,6,8,5,9,7,10,8,12,10,11,12].map((h, i) => (
@@ -165,7 +165,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
               <a href="#experience"
                 className="px-8 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-1"
-                style={{ boxShadow: '0 4px 24px rgba(16,185,129,0.25)' }}>
+                style={{ boxShadow: '0 4px 24px rgba(16,185,129,0.25)', color: 'white' }}>
                 View My Work
               </a>
               <a href="#contact"

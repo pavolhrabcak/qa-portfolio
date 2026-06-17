@@ -8,7 +8,7 @@ function FeaturedCard({ exp, visible }) {
     <div
       className="rounded-2xl overflow-hidden mb-8"
       style={{
-        background: 'rgba(15,23,42,0.6)',
+        background: 'var(--surface-dark)',
         border: '1px solid rgba(16,185,129,0.2)',
         backdropFilter: 'blur(12px)',
         opacity: visible ? 1 : 0,
@@ -29,7 +29,7 @@ function FeaturedCard({ exp, visible }) {
         </span>
         <span
           className="text-xs font-mono px-3 py-1 rounded-full"
-          style={{ background: 'rgba(51,65,85,0.6)', color: '#94a3b8' }}
+          style={{ background: 'var(--surface-solid)', color: '#94a3b8' }}
         >
           {exp.period}
         </span>
@@ -56,7 +56,7 @@ function FeaturedCard({ exp, visible }) {
             <span
               key={t}
               className="text-xs px-2 py-0.5 rounded font-mono text-slate-300"
-              style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.5)' }}
+              style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}
             >
               {t}
             </span>
@@ -74,8 +74,8 @@ function CompactCard({ exp, index, visible }) {
     <div
       className="rounded-xl overflow-hidden"
       style={{
-        border: '1px solid rgba(51,65,85,0.5)',
-        background: 'rgba(15,23,42,0.4)',
+        border: '1px solid var(--border-medium)',
+        background: 'var(--surface-dark)',
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(16px)',
         transition: `opacity 0.4s ease ${index * 100}ms, transform 0.4s ease ${index * 100}ms`,
@@ -106,7 +106,7 @@ function CompactCard({ exp, index, visible }) {
       {open && (
         <div
           className="px-6 pb-5"
-          style={{ borderTop: '1px solid rgba(51,65,85,0.4)' }}
+          style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
           <p className="text-slate-400 text-sm leading-relaxed mt-4 mb-4">{exp.description}</p>
           <ul className="space-y-1.5 mb-4">
@@ -122,7 +122,7 @@ function CompactCard({ exp, index, visible }) {
               <span
                 key={t}
                 className="text-xs px-2 py-0.5 rounded font-mono text-slate-400"
-                style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.5)' }}
+                style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}
               >
                 {t}
               </span>
@@ -140,7 +140,7 @@ export default function Experience() {
   const [featured, ...rest] = experience
 
   return (
-    <section id="experience" className="py-20 md:py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
+    <section id="experience" className="py-20 md:py-36 px-6">
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="04" title="Experience" />
 

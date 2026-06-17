@@ -17,11 +17,11 @@ function TrainingModal({ onClose }) {
     >
       <div
         className="w-full max-w-2xl rounded-2xl overflow-hidden"
-        style={{ background: 'rgba(15,23,42,0.98)', border: '1px solid rgba(51,65,85,0.7)' }}
+        style={{ background: 'var(--surface-dark)', border: '1px solid var(--border-input)' }}
         onClick={e => e.stopPropagation()}
       >
         {/* Modal header */}
-        <div className="flex items-center justify-between px-6 py-4" style={{ borderBottom: '1px solid rgba(51,65,85,0.5)' }}>
+        <div className="flex items-center justify-between px-6 py-4" style={{ borderBottom: '1px solid var(--border-medium)' }}>
           <span className="text-white font-bold text-lg">Trainings & Certifications</span>
           <button onClick={onClose} className="text-slate-400 hover:text-white transition-colors text-xl leading-none">✕</button>
         </div>
@@ -35,7 +35,7 @@ function TrainingModal({ onClose }) {
                 <div
                   key={i}
                   className="py-3 text-sm"
-                  style={{ borderBottom: i < training.length - 1 ? '1px solid rgba(51,65,85,0.25)' : 'none' }}
+                  style={{ borderBottom: i < training.length - 1 ? '1px solid var(--border-subtle)' : 'none' }}
                 >
                   <div className="flex items-start justify-between gap-3 mb-1">
                     <span className="text-white font-medium">{item.title}</span>
@@ -75,10 +75,10 @@ const RESPONSE_TIMES = [
 
 const fieldStyle = {
   width: '100%',
-  background: 'rgba(10,15,30,0.7)',
-  border: '1px solid rgba(51,65,85,0.7)',
+  background: 'var(--surface-input)',
+  border: '1px solid var(--border-input)',
   borderRadius: '8px',
-  color: '#f1f5f9',
+  color: 'var(--text-input)',
   padding: '10px 14px',
   fontSize: '14px',
   fontFamily: 'Inter, system-ui, sans-serif',
@@ -143,19 +143,19 @@ export default function Contact() {
   const focusStyle = { borderColor: 'rgba(16,185,129,0.6)' }
 
   return (
-    <section id="contact" className="py-20 md:py-36 px-6" style={{ background: 'rgba(15,23,42,0.4)' }}>
+    <section id="contact" className="py-20 md:py-36 px-6">
       <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="06" title="Get In Touch" />
 
         {/* Bug report frame */}
         <div
           className="mt-10 rounded-2xl overflow-hidden"
-          style={{ border: '1px solid rgba(51,65,85,0.7)', background: 'rgba(10,15,30,0.5)' }}
+          style={{ border: '1px solid var(--border-input)', background: 'var(--surface-card)' }}
         >
           {/* Form header bar */}
           <div
             className="px-6 py-4 flex flex-wrap items-center justify-between gap-3"
-            style={{ borderBottom: '1px solid rgba(51,65,85,0.5)', background: 'rgba(30,41,59,0.4)' }}
+            style={{ borderBottom: '1px solid var(--border-medium)', background: 'var(--surface-solid)' }}
           >
             <div className="flex items-center gap-3">
               <span className="text-slate-500 text-xs font-mono">PROJECT:</span>
@@ -194,7 +194,7 @@ export default function Contact() {
                   placeholder="Brief description of your project or request"
                   style={fieldStyle}
                   onFocus={e => Object.assign(e.target.style, focusStyle)}
-                  onBlur={e => Object.assign(e.target.style, { borderColor: 'rgba(51,65,85,0.7)' })}
+                  onBlur={e => Object.assign(e.target.style, { borderColor: 'var(--border-input)' })}
                   required
                 />
               </Field>
@@ -209,7 +209,7 @@ export default function Contact() {
                     placeholder="Jane Smith · Acme Corp"
                     style={fieldStyle}
                     onFocus={e => Object.assign(e.target.style, focusStyle)}
-                    onBlur={e => Object.assign(e.target.style, { borderColor: 'rgba(51,65,85,0.7)' })}
+                    onBlur={e => Object.assign(e.target.style, { borderColor: 'var(--border-input)' })}
                     required
                   />
                 </Field>
@@ -219,7 +219,7 @@ export default function Contact() {
                     onChange={set('environment')}
                     style={{ ...fieldStyle, cursor: 'pointer' }}
                     onFocus={e => Object.assign(e.target.style, focusStyle)}
-                    onBlur={e => Object.assign(e.target.style, { borderColor: 'rgba(51,65,85,0.7)' })}
+                    onBlur={e => Object.assign(e.target.style, { borderColor: 'var(--border-input)' })}
                   >
                     <option value="">Select…</option>
                     {ENVIRONMENTS.map(e => <option key={e} value={e}>{e}</option>)}
@@ -240,7 +240,7 @@ export default function Contact() {
                           : '1px solid rgba(51,65,85,0.5)',
                         background: form.priority === p.id
                           ? `${p.color}10`
-                          : 'rgba(15,23,42,0.5)',
+                          : 'var(--surface-priority)',
                       }}
                     >
                       <div className="flex items-center gap-2">
@@ -290,7 +290,7 @@ export default function Contact() {
                   onChange={set('response')}
                   style={{ ...fieldStyle, cursor: 'pointer' }}
                   onFocus={e => Object.assign(e.target.style, focusStyle)}
-                  onBlur={e => Object.assign(e.target.style, { borderColor: 'rgba(51,65,85,0.7)' })}
+                  onBlur={e => Object.assign(e.target.style, { borderColor: 'var(--border-input)' })}
                 >
                   <option value="">Select expected response time…</option>
                   {RESPONSE_TIMES.map(r => <option key={r} value={r}>{r}</option>)}
@@ -312,6 +312,7 @@ export default function Contact() {
                   style={{
                     background: 'linear-gradient(135deg, #059669, #10b981)',
                     boxShadow: '0 4px 20px rgba(16,185,129,0.25)',
+                    color: 'white',
                   }}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

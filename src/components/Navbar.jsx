@@ -14,7 +14,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('')
-
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40)
@@ -36,10 +35,10 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={scrolled ? {
-        background: 'rgba(10,15,30,0.85)',
+        background: 'var(--nav-bg)',
         backdropFilter: 'blur(14px)',
         WebkitBackdropFilter: 'blur(14px)',
-        borderBottom: '1px solid rgba(255,255,255,0.05)',
+        borderBottom: '1px solid var(--nav-border)',
         padding: '12px 0',
       } : { padding: '20px 0' }}
     >
@@ -107,7 +106,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div style={{ background: 'rgba(10,15,30,0.97)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <div style={{ background: 'var(--menu-bg)', borderTop: '1px solid var(--nav-border)' }}>
           <ul className="flex flex-col py-4 px-6 gap-4">
             {NAV.map(({ href, label }) => (
               <li key={href}>

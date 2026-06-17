@@ -17,8 +17,8 @@ function ProjectCard({ project, index, visible }) {
     <div
       className="card-hover rounded-2xl overflow-hidden flex flex-col"
       style={{
-        background: 'rgba(15,23,42,0.35)',
-        border: '1px solid rgba(51,65,85,0.35)',
+        background: 'var(--surface-dark)',
+        border: '1px solid var(--border-subtle)',
         opacity: visible ? 0.9 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(24px)',
         transition: `opacity 0.4s ease ${index * 150}ms, transform 0.4s ease ${index * 150}ms`,
@@ -27,13 +27,13 @@ function ProjectCard({ project, index, visible }) {
       {/* Card header */}
       <div
         className="px-6 py-5"
-        style={{ borderBottom: '1px solid rgba(51,65,85,0.35)' }}
+        style={{ borderBottom: '1px solid var(--border-subtle)' }}
       >
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="text-xs font-mono px-2 py-0.5 rounded text-slate-500"
-                style={{ background: 'rgba(51,65,85,0.4)', border: '1px solid rgba(71,85,105,0.3)' }}>
+                style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}>
                 side project
               </span>
             </div>
@@ -84,7 +84,7 @@ function ProjectCard({ project, index, visible }) {
             <span
               key={t}
               className="text-xs font-mono px-2 py-0.5 rounded text-slate-400"
-              style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.5)' }}
+              style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}
             >
               {t}
             </span>
@@ -110,7 +110,7 @@ export default function PersonalProjects() {
   const visible = useInView(ref)
 
   return (
-    <section id="projects" className="py-20 md:py-36 px-6">
+    <section id="projects" className="py-20 md:py-36 px-6" style={{ background: 'var(--bg-alt)' }}>
       <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="05" title="Personal Projects" />
         <p className="text-slate-500 text-sm font-mono mt-3 mb-12">

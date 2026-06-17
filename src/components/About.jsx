@@ -1,6 +1,18 @@
 import { useRef } from 'react'
 import { personalInfo } from '../data'
 import { useInView } from '../hooks/useInView'
+import { SiCypress, SiCucumber, SiPostman, SiJira } from 'react-icons/si'
+import { VscAzureDevops } from 'react-icons/vsc'
+import { FaMasksTheater } from 'react-icons/fa6'
+
+const TOOLS = [
+  { icon: FaMasksTheater, name: 'Playwright',    color: '#2EAD33' },
+  { icon: SiCypress,      name: 'Cypress',       color: '#69D3A7' },
+  { icon: SiCucumber,     name: 'Cucumber',      color: '#23D96C' },
+  { icon: SiPostman,      name: 'Postman',       color: '#FF6C37' },
+  { icon: SiJira,         name: 'JIRA',          color: '#0052CC' },
+  { icon: VscAzureDevops, name: 'Azure DevOps',  color: '#0078D7' },
+]
 
 const HIGHLIGHTS = [
   'manual', 'automated testing', 'automation frameworks',
@@ -26,7 +38,7 @@ export default function About() {
   const visible = useInView(ref)
 
   return (
-    <section id="about" className="py-20 md:py-36 px-6">
+    <section id="about" className="py-20 md:py-36 px-6" style={{ background: 'var(--bg-alt)' }}>
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="01" title="About Me" />
 
@@ -43,7 +55,7 @@ export default function About() {
                 {personalInfo.languages.map(lang => (
                   <span key={lang}
                     className="px-3 py-1 rounded-md text-sm font-mono text-slate-300"
-                    style={{ background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(71,85,105,0.4)' }}>
+                    style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}>
                     {lang}
                   </span>
                 ))}
@@ -52,15 +64,36 @@ export default function About() {
           </div>
 
           {/* Stats side */}
-          <div className="grid grid-cols-2 gap-4">
-            {personalInfo.stats.map((stat, i) => (
-              <div key={i} className="glass card-hover p-4 md:p-6 text-center rounded-xl">
-                <div className="text-3xl md:text-5xl font-extrabold gradient-text mb-2 leading-none">
-                  {stat.value}
+          <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-2 gap-4">
+              {personalInfo.stats.map((stat, i) => (
+                <div key={i} className="glass card-hover p-4 md:p-6 text-center rounded-xl">
+                  <div className="text-3xl md:text-5xl font-extrabold gradient-text mb-2 leading-none">
+                    {stat.value}
+                  </div>
+                  <div className="text-slate-400 text-sm">{stat.label}</div>
                 </div>
-                <div className="text-slate-400 text-sm">{stat.label}</div>
+              ))}
+            </div>
+
+            {/* Tools row */}
+            <div className="glass rounded-xl px-4 py-4">
+              <div className="flex justify-between items-center">
+                {TOOLS.map(({ icon: Icon, name, color }) => (
+                  <div
+                    key={name}
+                    className="tool-pill flex flex-col items-center gap-2"
+                    style={{
+                      '--glow-color': `${color}40`,
+                      '--border-color': `${color}70`,
+                    }}
+                  >
+                    <Icon size={36} style={{ color }} />
+                    <span className="text-xs text-slate-400 font-mono leading-tight text-center">{name}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

@@ -2,10 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Theme tokens ─────────────────────────────────────────── */
 :root {
   color-scheme: dark;
+  --bg-base:          #0a0f1e;
+  --bg-alt:           #0e1628;
+  --surface:          rgba(30, 41, 59, 0.65);
+  --surface-dark:     rgba(15, 23, 42, 0.60);
+  --surface-solid:    rgba(30, 41, 59, 0.80);
+  --surface-card:     rgba(10, 15, 30, 0.50);
+  --surface-input:    rgba(10, 15, 30, 0.70);
+  --surface-priority: rgba(15, 23, 42, 0.50);
+  --surface-hover:    rgba(30, 41, 59, 0.30);
+  --border-glass:     rgba(255, 255, 255, 0.10);
+  --border-subtle:    rgba(51, 65, 85, 0.40);
+  --border-medium:    rgba(51, 65, 85, 0.50);
+  --border-strong:    rgba(71, 85, 105, 0.45);
+  --border-input:     rgba(51, 65, 85, 0.70);
+  --nav-bg:           rgba(10, 15, 30, 0.85);
+  --nav-border:       rgba(255, 255, 255, 0.05);
+  --menu-bg:          rgba(10, 15, 30, 0.97);
+  --widget-bg:        rgba(15, 23, 42, 0.70);
+  --widget-border:    rgba(255, 255, 255, 0.07);
+  --widget-divider:   rgba(51, 65, 85, 0.50);
+  --metric-cell:      rgba(10, 15, 30, 0.50);
+  --metric-grid:      rgba(51, 65, 85, 0.30);
+  --step-badge-text:  #0a0f1e;
+  --grid-line:        rgba(16, 185, 129, 0.07);
+  --gradient-from:    #10b981;
+  --gradient-via:     #818cf8;
+  --card-hover-border: rgba(16, 185, 129, 0.35);
+  --card-hover-shadow: 0 0 24px rgba(16, 185, 129, 0.12), 0 0 48px rgba(99, 102, 241, 0.08);
+  --scrollbar-track:  #0f172a;
+  --scrollbar-thumb:  #334155;
+  --text-input:       #f1f5f9;
 }
 
+/* ── Base ─────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -13,7 +46,7 @@ html {
 }
 
 body {
-  background-color: #0a0f1e;
+  background-color: var(--bg-base);
   color: #f1f5f9;
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,24 +62,24 @@ body {
   position: relative;
 }
 
-/* Scrollbar */
+/* ── Scrollbar ────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0f172a; }
-::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #10b981; }
 
-/* Glassmorphism */
+/* ── Glassmorphism ────────────────────────────────────────── */
 .glass {
-  background: rgba(30, 41, 59, 0.45);
+  background: var(--surface);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-glass);
   border-radius: 12px;
 }
 
-/* Gradient text */
+/* ── Gradient text ────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #10b981 0%, #818cf8 50%, #10b981 100%);
+  background: linear-gradient(135deg, var(--gradient-from) 0%, var(--gradient-via) 50%, var(--gradient-from) 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -54,30 +87,29 @@ body {
   animation: gradient 6s ease infinite;
 }
 
-/* Grid background overlay */
+/* ── Grid background overlay ──────────────────────────────── */
 .grid-bg::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(16, 185, 129, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.07) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
 }
 
-/* Section divider */
+/* ── Section divider ──────────────────────────────────────── */
 section + section {
-  border-top: 1px solid rgba(51, 65, 85, 0.4);
+  border-top: 1px solid var(--border-subtle);
 }
 
-/* Prevent horizontal overflow in all sections */
 section {
   overflow-x: hidden;
   max-width: 100%;
 }
 
-/* Scroll fade-in */
+/* ── Scroll fade-in ───────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -88,10 +120,8 @@ section {
   transform: translateY(0);
 }
 
-/* Orb animation */
-.orb {
-  animation: orbFloat 12s ease-in-out infinite;
-}
+/* ── Orb animation ────────────────────────────────────────── */
+.orb { animation: orbFloat 12s ease-in-out infinite; }
 .orb-2 { animation-delay: -4s; }
 .orb-3 { animation-delay: -8s; }
 
@@ -106,12 +136,22 @@ section {
   50%       { background-position: 100% 50%; }
 }
 
-/* Emerald glow on hover cards */
+/* ── Tool icon pills ──────────────────────────────────────── */
+.tool-pill {
+  transition: transform 0.22s ease, filter 0.22s ease;
+  cursor: default;
+}
+.tool-pill:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 6px 14px var(--glow-color, rgba(16,185,129,0.5)));
+}
+
+/* ── Emerald glow on hover cards ──────────────────────────── */
 .card-hover {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  border-color: rgba(16, 185, 129, 0.35);
-  box-shadow: 0 0 24px rgba(16, 185, 129, 0.12), 0 0 48px rgba(99, 102, 241, 0.08);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--card-hover-shadow);
 }

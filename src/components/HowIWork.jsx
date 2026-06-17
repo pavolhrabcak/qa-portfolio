@@ -92,7 +92,7 @@ export default function HowIWork() {
                 <div className="flex items-center justify-between">
                   <span
                     className="text-xs font-mono font-bold px-2 py-0.5 rounded"
-                    style={{ color: '#0a0f1e', background: '#10b981' }}
+                    style={{ color: 'var(--step-badge-text)', background: '#10b981' }}
                   >
                     {step.number}
                   </span>
