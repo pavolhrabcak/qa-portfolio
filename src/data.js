@@ -95,20 +95,6 @@ export const technologies = [
     items: ['VS Code', 'Claude', 'GitHub Copilot', 'Codex', 'MCP Server'],
   },
   {
-    category: 'Languages & Data',
-    color: 'text-cyan-300',
-    bg: 'rgba(6,182,212,0.08)',
-    border: 'rgba(6,182,212,0.25)',
-    items: ['SQL', 'JSON', 'XML', 'Supabase'],
-  },
-  {
-    category: 'Design & Markup',
-    color: 'text-pink-300',
-    bg: 'rgba(236,72,153,0.08)',
-    border: 'rgba(236,72,153,0.25)',
-    items: ['Figma', 'Zeplin', 'HTML', 'CSS', 'Tailwind', 'Bootstrap', 'Oracle BCC CMS'],
-  },
-  {
     category: 'Reporting & Documentation',
     color: 'text-blue-300',
     bg: 'rgba(59,130,246,0.08)',

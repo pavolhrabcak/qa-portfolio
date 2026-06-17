@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { personalInfo } from '../data'
 import { useInView } from '../hooks/useInView'
-import { SiCypress, SiCucumber, SiPostman, SiJira } from 'react-icons/si'
+import { SiCypress, SiCucumber, SiPostman, SiJira, SiDolphin } from 'react-icons/si'
 import { VscAzureDevops } from 'react-icons/vsc'
 import { FaMasksTheater } from 'react-icons/fa6'
 
@@ -10,8 +10,9 @@ const TOOLS = [
   { icon: SiCypress,      name: 'Cypress',       color: '#69D3A7' },
   { icon: SiCucumber,     name: 'Cucumber',      color: '#23D96C' },
   { icon: SiPostman,      name: 'Postman',       color: '#FF6C37' },
+  { icon: SiDolphin,      name: 'MySQL',         color: '#4479A1' },
   { icon: SiJira,         name: 'JIRA',          color: '#0052CC' },
-  { icon: VscAzureDevops, name: 'Azure DevOps',  color: '#0078D7' },
+  { icon: VscAzureDevops, name: 'Azure',         color: '#0078D7' },
 ]
 
 const HIGHLIGHTS = [
@@ -82,13 +83,13 @@ export default function About() {
                 {TOOLS.map(({ icon: Icon, name, color }) => (
                   <div
                     key={name}
-                    className="tool-pill flex flex-col items-center gap-2"
+                    className="tool-pill flex flex-col items-center gap-2 w-14"
                     style={{
                       '--glow-color': `${color}40`,
                       '--border-color': `${color}70`,
                     }}
                   >
-                    <Icon size={36} style={{ color }} />
+                    <Icon size={30} style={{ color }} />
                     <span className="text-xs text-slate-400 font-mono leading-tight text-center">{name}</span>
                   </div>
                 ))}

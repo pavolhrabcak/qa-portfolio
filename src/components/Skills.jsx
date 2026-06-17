@@ -100,7 +100,7 @@ export default function Skills() {
         </div>
 
         {/* ── Tech tag grid ── */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {technologies.map((cat) => (
             <div key={cat.category} className="glass card-hover p-5 rounded-xl">
               <h3
