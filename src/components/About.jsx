@@ -79,11 +79,11 @@ export default function About() {
 
             {/* Tools row */}
             <div className="glass rounded-xl px-4 py-4">
-              <div className="flex justify-between items-center">
+              <div className="grid grid-cols-4 sm:grid-cols-7 gap-y-3">
                 {TOOLS.map(({ icon: Icon, name, color }) => (
                   <div
                     key={name}
-                    className="tool-pill flex flex-col items-center gap-2 w-14"
+                    className="tool-pill flex flex-col items-center gap-2"
                     style={{
                       '--glow-color': `${color}40`,
                       '--border-color': `${color}70`,
