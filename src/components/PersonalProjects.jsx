@@ -67,11 +67,11 @@ function ProjectCard({ project, index, visible }) {
 
       {/* Body */}
       <div className="px-6 py-5 flex flex-col flex-1">
-        <p className="text-slate-400 text-sm leading-relaxed mb-5">{project.description}</p>
+        <p className="text-slate-400 text-base leading-relaxed mb-5">{project.description}</p>
 
         <ul className="space-y-1.5 mb-5 flex-1">
           {project.features.map((f, i) => (
-            <li key={i} className="flex gap-2 text-sm text-slate-300">
+            <li key={i} className="flex gap-2 text-base text-slate-300">
               <span className="text-indigo-400 mt-0.5 shrink-0">▸</span>
               {f}
             </li>

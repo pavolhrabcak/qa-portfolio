@@ -40,11 +40,11 @@ function FeaturedCard({ exp, visible }) {
         <h3 className="text-white font-bold text-xl leading-tight mb-1">{exp.role}</h3>
         <p className="text-emerald-400 font-medium text-sm mb-4">{exp.company}</p>
 
-        <p className="text-slate-400 text-sm leading-relaxed mb-5">{exp.description}</p>
+        <p className="text-slate-400 text-base leading-relaxed mb-5">{exp.description}</p>
 
         <ul className="space-y-2 mb-5">
           {exp.highlights.map((h, i) => (
-            <li key={i} className="flex gap-2 text-sm text-slate-300">
+            <li key={i} className="flex gap-2 text-base text-slate-300">
               <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
               {h}
             </li>
@@ -108,10 +108,10 @@ function CompactCard({ exp, index, visible }) {
           className="px-6 pb-5"
           style={{ borderTop: '1px solid var(--border-subtle)' }}
         >
-          <p className="text-slate-400 text-sm leading-relaxed mt-4 mb-4">{exp.description}</p>
+          <p className="text-slate-400 text-base leading-relaxed mt-4 mb-4">{exp.description}</p>
           <ul className="space-y-1.5 mb-4">
             {exp.highlights.map((h, i) => (
-              <li key={i} className="flex gap-2 text-sm text-slate-300">
+              <li key={i} className="flex gap-2 text-base text-slate-300">
                 <span className="text-emerald-400 mt-0.5 shrink-0">▸</span>
                 {h}
               </li>
@@ -141,7 +141,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-20 md:py-36 px-6">
-      <div ref={ref} className={`max-w-4xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="04" title="Experience" />
 
         <div className="mt-12">
