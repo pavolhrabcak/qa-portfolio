@@ -270,7 +270,6 @@ export const projects = [
     status: 'Invite Only',
     roles: ['Product Owner', 'QA', 'AI-Assisted Dev', 'Content Creator'],
     features: [
-      '2 years of content creation — song collection, music sheets and MP3 recordings',
       'Browse and search 400+ folk songs with full lyrics',
       'Favourites, full-screen view, copy and print lyrics',
       'View, download and print PDF sheet music',

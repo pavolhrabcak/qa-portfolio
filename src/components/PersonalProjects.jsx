@@ -31,12 +31,6 @@ function ProjectCard({ project, index, visible }) {
       >
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-mono px-2 py-0.5 rounded text-slate-500"
-                style={{ background: 'var(--surface-solid)', border: '1px solid var(--border-strong)' }}>
-                side project
-              </span>
-            </div>
             <h3 className="text-slate-200 font-bold text-lg leading-tight">{project.title}</h3>
             <p className="text-slate-500 text-sm font-mono mt-0.5">{project.subtitle}</p>
           </div>
@@ -47,7 +41,7 @@ function ProjectCard({ project, index, visible }) {
               : { color: '#f59e0b', background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.25)' }
             }
           >
-            {isLive ? '● Live' : '⬡ Invite Only'}
+            {isLive ? '● Live' : '⬡ Account needed'}
           </span>
         </div>
 
