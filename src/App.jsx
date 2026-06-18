@@ -10,6 +10,7 @@ import PersonalProjects from './components/PersonalProjects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollNav from './components/ScrollNav'
 import CVPage from './pages/CVPage'
 
 function Portfolio() {
@@ -26,6 +27,7 @@ function Portfolio() {
       <Contact />
       <Footer />
       <ScrollToTop />
+      <ScrollNav />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { useInView } from '../hooks/useInView'
 import { SectionHeader } from './About'
 
@@ -67,7 +67,7 @@ export default function HowIWork() {
 
   return (
     <section id="how-i-work" className="py-20 md:py-36 px-6">
-      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+      <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="02" title="How I Work" />
 
         <p className="text-slate-400 mt-4 mb-14 text-base leading-relaxed">
@@ -133,3 +133,4 @@ export default function HowIWork() {
     </section>
   )
 }
+

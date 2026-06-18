@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { technologies } from '../data'
 import { useInView } from '../hooks/useInView'
 import { SectionHeader } from './About'
@@ -9,7 +9,7 @@ export default function Technologies() {
 
   return (
     <section id="technologies" className="py-20 md:py-36 px-6">
-      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+      <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="04" title="Technologies & Tools" />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
@@ -39,3 +39,4 @@ export default function Technologies() {
     </section>
   )
 }
+
