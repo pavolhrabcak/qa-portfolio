@@ -141,7 +141,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-20 md:py-36 px-6">
-      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+      <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="04" title="Experience" />
 
         <div className="mt-12">
