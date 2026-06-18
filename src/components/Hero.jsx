@@ -52,7 +52,7 @@ function MetricCell({ line1, line2, color, delay }) {
 function MetricsWidget() {
   return (
     <div
-      className="w-full max-w-xs rounded-2xl overflow-hidden"
+      className="w-full max-w-md rounded-2xl overflow-hidden"
       style={{
         background: 'var(--widget-bg)',
         backdropFilter: 'blur(16px)',
