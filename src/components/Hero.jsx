@@ -129,7 +129,7 @@ export default function Hero() {
       <div className="orb orb-3 absolute top-1/2 left-1/2 rounded-full -translate-x-1/2 -translate-y-1/2"
         style={{ width: 'min(300px, 60vw)', height: 'min(300px, 60vw)', background: 'radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%)' }} />
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 py-24">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left — text content */}
@@ -206,4 +206,5 @@ export default function Hero() {
     </section>
   )
 }
+
 

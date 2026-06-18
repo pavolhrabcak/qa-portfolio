@@ -66,7 +66,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-20 md:py-36 px-6" style={{ background: 'var(--bg-alt)' }}>
-      <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="03" title="Skills & Stack" />
 
         {/* ── Test suites ── */}
@@ -127,4 +127,5 @@ export default function Skills() {
     </section>
   )
 }
+
 

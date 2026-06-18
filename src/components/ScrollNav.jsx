@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const NAV = [
   { href: '#about',      label: 'About' },
   { href: '#how-i-work', label: 'Process' },
-  { href: '#skills',     label: 'Skills & Stack' },
+  { href: '#skills',     label: 'Skills' },
   { href: '#case-study', label: 'Case Study' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects',   label: 'Projects' },

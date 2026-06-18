@@ -40,7 +40,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-20 md:py-36 px-6" style={{ background: 'var(--bg-alt)' }}>
-      <div ref={ref} className={`max-w-5xl mx-auto reveal ${visible ? 'visible' : ''}`}>
+      <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="01" title="About Me" />
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-14 items-start mt-12">
@@ -111,4 +111,5 @@ export function SectionHeader({ index, title }) {
     </div>
   )
 }
+
 

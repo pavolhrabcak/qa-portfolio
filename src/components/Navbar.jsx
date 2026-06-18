@@ -42,7 +42,7 @@ export default function Navbar() {
         padding: '12px 0',
       } : { padding: '20px 0' }}
     >
-      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="font-mono text-lg font-semibold">
           <span className="text-emerald-400">PH</span>
@@ -130,4 +130,5 @@ export default function Navbar() {
     </nav>
   )
 }
+
 
