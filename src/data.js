@@ -199,7 +199,7 @@ export const caseStudy = {
   comparison: [
     { label: 'E2E Coverage',           before: 'Limited',        after: '450+ automated tests',        delta: 'Core paths covered'     },
     { label: 'Regression Execution',   before: 'Mostly manual',  after: 'Core workflows automated',    delta: '~90% · risk-based'  },
-    { label: 'Role Coverage',          before: 'Partial',        after: 'Complete RBAC validation',    delta: '4 roles covered'        },
+    { label: 'Role Coverage',          before: 'Partial',        after: 'Complete RBAC validation',    delta: '5 roles covered'        },
     { label: 'API Dependency',         before: 'High',           after: 'Extensively mocked',          delta: 'Low flakiness'          },
     { label: 'Accessibility Testing',  before: 'None',           after: 'Automated axe-core checks',   delta: 'Continuous a11y'        },
     { label: 'Test Architecture',      before: 'Ad-hoc',         after: 'Reusable test architecture',  delta: 'Scalable & documented'  },
