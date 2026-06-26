@@ -1,4 +1,4 @@
-﻿import { useRef } from 'react'
+﻿import React, { useRef } from 'react'
 import { useInView } from '../hooks/useInView'
 import { SectionHeader } from './About'
 
@@ -77,40 +77,34 @@ export default function HowIWork() {
         {/* Pipeline */}
         <div className="flex flex-col lg:flex-row items-stretch gap-0">
           {STEPS.map((step, i) => (
-            <div key={step.number} className="flex flex-col lg:flex-row items-stretch flex-1 min-w-0">
+            <React.Fragment key={step.number}>
+              {/* Step card wrapper */}
+              <div className="flex-1 min-w-0 flex flex-col">
+                <div
+                  className="glass card-hover rounded-xl p-5 flex flex-col gap-3 flex-1"
+                  style={{
+                    opacity: visible ? 1 : 0,
+                    transform: visible ? 'translateY(0)' : 'translateY(20px)',
+                    transition: `opacity 0.4s ease ${i * 100}ms, transform 0.4s ease ${i * 100}ms`,
+                  }}
+                >
+                  {/* Step number + title */}
+                  <div className="flex items-center gap-2 mb-2">
+                    <span
+                      className="text-xs font-mono font-bold px-2 py-0.5 rounded shrink-0"
+                      style={{ color: 'var(--step-badge-text)', background: '#10b981' }}
+                    >
+                      {step.number}
+                    </span>
+                    <h3 className="text-slate-300 font-bold text-base leading-tight flex-1 min-w-0">{step.title}</h3>
+                  </div>
 
-              {/* Step card */}
-              <div
-                className="glass card-hover flex-1 rounded-xl p-5 flex flex-col gap-3"
-                style={{
-                  opacity: visible ? 1 : 0,
-                  transform: visible ? 'translateY(0)' : 'translateY(20px)',
-                  transition: `opacity 0.4s ease ${i * 100}ms, transform 0.4s ease ${i * 100}ms`,
-                }}
-              >
-                {/* Step number + emoji */}
-                <div className="flex items-center justify-between">
-                  <span
-                    className="text-xs font-mono font-bold px-2 py-0.5 rounded"
-                    style={{ color: 'var(--step-badge-text)', background: '#10b981' }}
-                  >
-                    {step.number}
-                  </span>
-                  <span className="text-xl">{step.emoji}</span>
+                  {/* Description */}
+                  <p className="text-slate-400 text-base leading-relaxed flex-1">{step.description}</p>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-white font-bold text-base leading-tight">{step.title}</h3>
-
-                {/* Description */}
-                <p className="text-slate-400 text-base leading-relaxed flex-1">{step.description}</p>
-              </div>
-
-              {/* Arrow connector (between steps, not after last) */}
-              {i < STEPS.length - 1 && (
-                <>
-                  <Arrow />
-                  {/* Mobile vertical connector */}
+                {/* Mobile vertical connector */}
+                {i < STEPS.length - 1 && (
                   <div className="lg:hidden flex justify-center my-1">
                     <div className="flex flex-col items-center gap-0.5">
                       <div className="w-px h-4" style={{ background: 'rgba(16,185,129,0.4)' }} />
@@ -119,9 +113,12 @@ export default function HowIWork() {
                       </svg>
                     </div>
                   </div>
-                </>
-              )}
-            </div>
+                )}
+              </div>
+
+              {/* Desktop arrow between cards */}
+              {i < STEPS.length - 1 && <Arrow />}
+            </React.Fragment>
           ))}
         </div>
 

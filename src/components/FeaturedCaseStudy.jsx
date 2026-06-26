@@ -37,7 +37,7 @@ export default function FeaturedCaseStudy() {
           >
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-2">{caseStudy.title}</h2>
+                <h2 className="text-2xl font-bold text-slate-300 mb-2">{caseStudy.title}</h2>
                 <div className="flex flex-wrap gap-3">
                   {[caseStudy.company, caseStudy.period, caseStudy.role].map(tag => (
                     <span

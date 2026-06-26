@@ -37,7 +37,7 @@ function FeaturedCard({ exp, visible }) {
 
       {/* Body */}
       <div className="p-6">
-        <h3 className="text-white font-bold text-xl leading-tight mb-1">{exp.role}</h3>
+        <h3 className="text-slate-300 font-bold text-xl leading-tight mb-1">{exp.role}</h3>
         <p className="text-emerald-400 font-medium text-sm mb-4">{exp.company}</p>
 
         <p className="text-slate-400 text-base leading-relaxed mb-5">{exp.description}</p>
@@ -87,7 +87,7 @@ function CompactCard({ exp, index, visible }) {
         onClick={() => setOpen(o => !o)}
       >
         <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 min-w-0">
-          <span className="text-white font-semibold text-sm leading-tight">{exp.role}</span>
+          <span className="text-slate-300 font-semibold text-sm leading-tight">{exp.role}</span>
           <span className="text-slate-500 text-xs font-mono hidden sm:block">·</span>
           <span className="text-emerald-400 text-xs font-medium">{exp.company}</span>
         </div>

@@ -44,7 +44,7 @@ export default function Training() {
                   }}
                 >
                   <span className="col-span-1 font-mono text-emerald-400 font-semibold">{item.year}</span>
-                  <span className="col-span-5 text-white font-medium pr-4">{item.title}</span>
+                  <span className="col-span-5 text-slate-300 font-medium pr-4">{item.title}</span>
                   <span className="col-span-4 text-slate-400">{item.provider}</span>
                   <div className="col-span-2 flex justify-end">
                     <span

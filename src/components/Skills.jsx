@@ -16,7 +16,7 @@ function SkillCard({ group, count, visible }) {
         <div className="flex items-center gap-2.5 min-w-0">
           <span className="text-lg shrink-0">{group.emoji}</span>
           <div className="min-w-0">
-            <span className="text-white font-semibold text-sm">{group.category}</span>
+            <span className="text-slate-300 font-semibold text-sm">{group.category}</span>
             <span className="text-slate-500 text-xs font-mono ml-2 hidden sm:inline">suite</span>
           </div>
         </div>

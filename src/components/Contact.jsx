@@ -22,7 +22,7 @@ function TrainingModal({ onClose }) {
       >
         {/* Modal header */}
         <div className="flex items-center justify-between px-6 py-4" style={{ borderBottom: '1px solid var(--border-medium)' }}>
-          <span className="text-white font-bold text-lg">Trainings & Certifications</span>
+          <span className="text-slate-300 font-bold text-lg">Trainings & Certifications</span>
           <button onClick={onClose} className="text-slate-400 hover:text-white transition-colors text-xl leading-none">✕</button>
         </div>
 
@@ -38,7 +38,7 @@ function TrainingModal({ onClose }) {
                   style={{ borderBottom: i < training.length - 1 ? '1px solid var(--border-subtle)' : 'none' }}
                 >
                   <div className="flex items-start justify-between gap-3 mb-1">
-                    <span className="text-white font-medium">{item.title}</span>
+                    <span className="text-slate-300 font-medium">{item.title}</span>
                     <span className="text-xs px-2 py-0.5 rounded font-mono shrink-0"
                       style={{ background: style.bg, border: `1px solid ${style.border}`, color: style.color }}>
                       {item.type}

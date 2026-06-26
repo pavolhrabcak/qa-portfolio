@@ -106,7 +106,7 @@ export function SectionHeader({ index, title }) {
   return (
     <div className="flex items-center gap-4">
       <span className="text-emerald-400 font-mono text-sm">{index}.</span>
-      <h2 className="text-3xl font-bold text-white">{title}</h2>
+      <h2 className="text-3xl font-bold text-slate-300">{title}</h2>
       <div className="flex-1 h-px" style={{ background: 'rgba(51,65,85,0.8)' }} />
     </div>
   )
