@@ -61,7 +61,7 @@ const TECH_ICONS = {
   'Claude':          { icon: ClaudeIcon,       color: '#D97757' },
   'GitHub Copilot':  { icon: CopilotIcon,     color: '#a3a3a3' },
   'Confluence':      { icon: SiConfluence,     color: '#0052CC' },
-  'Playwright HTML Report': { icon: FaMasksTheater, color: '#2EAD33' },
+  'Playwright Report': { icon: FaMasksTheater, color: '#2EAD33' },
   'Allure Report': { icon: AllureLogo,        color: '#E8394D' },
   'Codex':       { icon: CodexIcon,           color: '#7A9DFF' },
 }
@@ -83,7 +83,11 @@ function TechIcon({ name, catColor }) {
           }}>{abbr}</div>
         )
       }
-      <span className="text-xs text-slate-400 font-mono leading-tight text-center">{name}</span>
+      <span className="text-xs text-slate-400 font-mono leading-tight text-center">
+        {name.includes(' ')
+          ? name.split(' ').map((word, i) => <span key={i} className="block">{word}</span>)
+          : name}
+      </span>
     </div>
   )
 }

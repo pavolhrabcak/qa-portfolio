@@ -99,7 +99,7 @@ export const technologies = [
     color: 'text-blue-300',
     bg: 'rgba(59,130,246,0.08)',
     border: 'rgba(59,130,246,0.25)',
-    items: ['Allure Report', 'Playwright HTML Report', 'Confluence'],
+    items: ['Allure Report', 'Playwright Report', 'Confluence'],
   },
 ]
 
