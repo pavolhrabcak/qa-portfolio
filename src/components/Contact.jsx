@@ -326,12 +326,12 @@ export default function Contact() {
         </div>
 
         {/* Direct links below */}
-        <p className="text-center text-slate-600 text-xs font-mono mt-6">
-          or reach out directly —{' '}
-          <a href={`mailto:${personalInfo.email}`} className="text-emerald-400 hover:underline">{personalInfo.email}</a>
-          {' · '}
-          <a href={`https://${personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400 transition-colors">LinkedIn</a>
-        </p>
+        <div className="flex flex-wrap justify-center items-center gap-x-1.5 gap-y-1 text-xs font-mono mt-6">
+          <span className="text-slate-600">or reach out directly —</span>
+          <a href={`mailto:${personalInfo.email}`} className="text-emerald-400 hover:underline whitespace-nowrap">{personalInfo.email}</a>
+          <span className="text-slate-600">·</span>
+          <a href={`https://${personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400 transition-colors whitespace-nowrap">LinkedIn</a>
+        </div>
         <p className="text-center text-xs font-mono mt-3">
           <button onClick={() => setShowTraining(true)} className="text-slate-400 hover:text-emerald-400 transition-colors">
             Trainings & Certifications →
