@@ -5,7 +5,8 @@ import {
   SiJira, SiGithubcopilot, SiConfluence,
 } from 'react-icons/si'
 import { VscAzureDevops, VscTerminal, VscVscode } from 'react-icons/vsc'
-import { FaMasksTheater, FaRobot } from 'react-icons/fa6'
+import { FaMasksTheater, FaRobot, FaListCheck, FaWandMagicSparkles, FaServer } from 'react-icons/fa6'
+import { VscGraph } from 'react-icons/vsc'
 
 const TECH_ICONS = {
   'GitHub':          { icon: SiGithub,        color: '#ffffff' },
@@ -22,6 +23,10 @@ const TECH_ICONS = {
   'GitHub Copilot':  { icon: SiGithubcopilot, color: '#a3a3a3' },
   'Confluence':      { icon: SiConfluence,     color: '#0052CC' },
   'Playwright HTML Report': { icon: FaMasksTheater, color: '#2EAD33' },
+  'TestLink':    { icon: FaListCheck,         color: '#94a3b8' },
+  'Allure Report': { icon: VscGraph,          color: '#f97316' },
+  'Codex':       { icon: FaWandMagicSparkles, color: '#a78bfa' },
+  'MCP Server':  { icon: FaServer,            color: '#94a3b8' },
 }
 
 function TechIcon({ name, catColor }) {
