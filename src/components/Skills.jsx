@@ -150,7 +150,7 @@ export default function Skills() {
             <div key={cat.category}>
               {ci > 0 && <div className="border-t mb-8" style={{ borderColor: 'rgba(51,65,85,0.4)' }} />}
               <div className="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
-                style={{ color: cat.border }}
+                style={{ color: cat.border }}>
                 {cat.category}
               </div>
               <div className="flex flex-wrap gap-x-6 gap-y-4">
