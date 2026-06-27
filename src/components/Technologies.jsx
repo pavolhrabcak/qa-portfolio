@@ -8,7 +8,7 @@ export default function Technologies() {
   const visible = useInView(ref)
 
   return (
-    <section id="technologies" className="py-20 md:py-36 px-6">
+    <section id="technologies" className="py-14 md:py-24 px-6">
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`}>
         <SectionHeader index="04" title="Technologies & Tools" />
 

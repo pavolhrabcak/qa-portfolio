@@ -66,7 +66,7 @@ export default function HowIWork() {
   const visible = useInView(ref)
 
   return (
-    <section id="how-i-work" className="py-20 md:py-36 px-6 section-glow">
+    <section id="how-i-work" className="py-14 md:py-24 px-6 section-glow">
       <div ref={ref} className={`max-w-6xl mx-auto reveal ${visible ? 'visible' : ''}`} style={{ position: 'relative', zIndex: 1 }}>
         <SectionHeader index="02" title="How I Work" />
 
