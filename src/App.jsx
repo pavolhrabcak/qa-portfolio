@@ -11,11 +11,13 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import ScrollNav from './components/ScrollNav'
+import GlobalParticles from './components/GlobalParticles'
 import CVPage from './pages/CVPage'
 
 function Portfolio() {
   return (
     <div className="min-h-screen bg-[#0a0f1e]">
+      <GlobalParticles />
       <Navbar />
       <Hero />
       <About />
