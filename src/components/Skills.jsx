@@ -100,13 +100,13 @@ const TECH_ICONS = {
   'Codex':       { icon: CodexIcon,           color: '#7A9DFF' },
 }
 
-function TechIcon({ name, catColor }) {
+function TechIcon({ name, catColor, colStart }) {
   const entry = TECH_ICONS[name]
   const color = entry?.color ?? catColor
   const abbr = name.replace(/[^A-Z0-9]/gi, '').slice(0, 3).toUpperCase() || name.slice(0, 2).toUpperCase()
   return (
     <div className="tool-pill flex flex-col items-center gap-2"
-      style={{ '--glow-color': `${color}40` }}>
+      style={{ '--glow-color': `${color}40`, ...(colStart ? { gridColumnStart: colStart } : {}) }}>
       {entry?.icon
         ? <entry.icon size={36} style={{ color }} />
         : (
@@ -226,14 +226,20 @@ export default function Skills() {
 
         {/* ── Tech icon grid ── */}
         <div className="glass rounded-xl p-6 md:p-8">
-          <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-8">
-            {technologies.map((cat) => (
-              <Fragment key={cat.category}>
-                {cat.items.map(item => (
-                  <TechIcon key={item} name={item} catColor="#94a3b8" />
-                ))}
-              </Fragment>
-            ))}
+          <div className="grid grid-cols-4 justify-items-center gap-x-4 gap-y-6 sm:flex sm:flex-wrap sm:items-start sm:justify-center sm:gap-x-8 sm:gap-y-8">
+            {(() => {
+              const allItems = technologies.flatMap(cat => cat.items)
+              const lastRowCount = allItems.length % 4
+              const lastRowStart = allItems.length - lastRowCount
+              return allItems.map((item, idx) => (
+                <TechIcon
+                  key={item}
+                  name={item}
+                  catColor="#94a3b8"
+                  colStart={lastRowCount > 0 && idx === lastRowStart ? 2 : undefined}
+                />
+              ))
+            })()}
           </div>
         </div>
       </div>
