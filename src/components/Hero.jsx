@@ -198,7 +198,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2">
         <span className="text-slate-600 text-xs font-mono">scroll</span>
         <div className="w-px h-12 animate-pulse"
           style={{ background: 'linear-gradient(to bottom, rgba(16,185,129,0.5), transparent)' }} />
