@@ -276,30 +276,25 @@ export default function FeaturedCaseStudy() {
             {/* Editor area */}
             <div className="flex-1 min-w-0 flex flex-col sm:min-h-0">
 
-              {/* Tab bar */}
-              <div className="relative">
-                <div className="flex overflow-x-auto" style={{ borderBottom: '1px solid var(--border-medium)', background: 'rgba(8,12,24,0.4)', scrollbarWidth: 'none' }}>
-                  {TABS.map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      className="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm font-sans whitespace-nowrap shrink-0 transition-colors duration-150"
-                      style={{
-                        background: activeTab === tab.id ? 'var(--surface-dark)' : 'transparent',
-                        color: activeTab === tab.id ? '#e2e8f0' : '#475569',
-                        borderBottom: activeTab === tab.id ? '1px solid #10b981' : '1px solid transparent',
-                        borderRight: '1px solid var(--border-subtle)',
-                      }}
-                    >
-                      <span style={{ color: tab.color, fontSize: '8px' }}>■</span>
-                      <span className="sm:hidden">{tab.short}</span>
-                      <span className="hidden sm:inline">{tab.label}</span>
-                    </button>
-                  ))}
-                </div>
-                {/* Gradient fade — hints that more tabs are hidden to the right */}
-                <div className="sm:hidden absolute right-0 top-0 bottom-0 w-10 pointer-events-none"
-                  style={{ background: 'linear-gradient(to right, transparent, rgba(8,12,24,0.95))' }} />
+              {/* Tab bar — wraps on mobile so all tabs are always visible */}
+              <div className="flex flex-wrap sm:flex-nowrap sm:overflow-x-auto" style={{ borderBottom: '1px solid var(--border-medium)', background: 'rgba(8,12,24,0.4)', scrollbarWidth: 'none' }}>
+                {TABS.map(tab => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className="flex items-center gap-1 px-3 py-2 sm:px-4 sm:py-2.5 text-xs sm:text-sm font-sans whitespace-nowrap shrink-0 transition-colors duration-150"
+                    style={{
+                      background: activeTab === tab.id ? 'var(--surface-dark)' : 'transparent',
+                      color: activeTab === tab.id ? '#e2e8f0' : '#475569',
+                      borderBottom: activeTab === tab.id ? '1px solid #10b981' : '1px solid transparent',
+                      borderRight: '1px solid var(--border-subtle)',
+                    }}
+                  >
+                    <span style={{ color: tab.color, fontSize: '8px' }}>■</span>
+                    <span className="sm:hidden">{tab.short}</span>
+                    <span className="hidden sm:inline">{tab.label}</span>
+                  </button>
+                ))}
               </div>
 
               {/* Content — scrollable on desktop, natural height on mobile */}
