@@ -121,11 +121,18 @@ function TabContent({ id, visible }) {
     <div className="space-y-6">
       <div className="rounded-xl px-6 py-5"
         style={{ background: 'rgba(34,211,238,0.05)', border: '1px solid rgba(34,211,238,0.2)' }}>
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-4">
           <span style={{ color: '#22d3ee' }} className="text-sm">★</span>
           <div className="text-xs font-mono font-bold uppercase tracking-widest" style={{ color: '#22d3ee' }}>Business Impact</div>
         </div>
-        <p className="text-slate-300 text-base leading-relaxed">{caseStudy.impact}</p>
+        <ul className="space-y-4">
+          {caseStudy.impact.map((item, i) => (
+            <li key={i} className="flex gap-3 text-slate-300 text-base leading-relaxed">
+              <span className="shrink-0 mt-1 text-cyan-400">→</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
