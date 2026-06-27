@@ -74,32 +74,32 @@ export const skills = [
 
 export const technologies = [
   {
+    category: 'Language',
+    color: 'text-blue-300',
+    bg: 'rgba(49,120,198,0.08)',
+    border: 'rgba(49,120,198,0.25)',
+    items: ['TypeScript'],
+  },
+  {
     category: 'CI/CD & DevOps',
     color: 'text-orange-300',
     bg: 'rgba(249,115,22,0.08)',
     border: 'rgba(249,115,22,0.25)',
-    items: ['GitHub', 'Git', 'Azure DevOps', 'Jenkins', 'Docker', 'Vercel', 'Linux', 'Terminal'],
-  },
-  {
-    category: 'Bug Tracking & TMS',
-    color: 'text-red-300',
-    bg: 'rgba(239,68,68,0.08)',
-    border: 'rgba(239,68,68,0.25)',
-    items: ['JIRA', 'Azure DevOps'],
+    items: ['GitHub', 'Git', 'Azure DevOps', 'Docker', 'Linux', 'Terminal'],
   },
   {
     category: 'IDE & AI Tools',
     color: 'text-violet-300',
     bg: 'rgba(139,92,246,0.08)',
     border: 'rgba(139,92,246,0.25)',
-    items: ['VS Code', 'Claude', 'GitHub Copilot', 'Codex'],
+    items: ['VS Code', 'Claude', 'GitHub Copilot'],
   },
   {
     category: 'Reporting & Documentation',
     color: 'text-blue-300',
     bg: 'rgba(59,130,246,0.08)',
     border: 'rgba(59,130,246,0.25)',
-    items: ['Allure Report', 'Playwright Report', 'Confluence'],
+    items: ['Allure Report', 'Playwright Report', 'Confluence', 'JIRA'],
   },
 ]
 

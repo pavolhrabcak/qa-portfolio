@@ -1,7 +1,7 @@
-﻿import { useRef } from 'react'
+﻿import { useRef, Fragment } from 'react'
 import { skills, technologies } from '../data'
 import {
-  SiGithub, SiGit, SiJenkins, SiDocker, SiVercel, SiLinux,
+  SiGithub, SiGit, SiTypescript, SiDocker, SiVercel, SiLinux,
   SiJira, SiGithubcopilot, SiConfluence, SiOpenai,
 } from 'react-icons/si'
 import { VscAzureDevops, VscTerminal, VscVscode } from 'react-icons/vsc'
@@ -40,18 +40,52 @@ function CodexIcon({ size = 28 }) {
 
 function AllureLogo({ size = 28 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 6 L94 88 H72 L50 44 L28 88 H6 Z" fill="#E8394D" />
-      <path d="M50 44 L28 88 H72 Z" fill="rgba(0,0,0,0.25)" />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" width={size} height={size}>
+      <g clipPath="url(#allure-a)">
+        <path fill="url(#allure-b)" fillRule="evenodd" d="M22.23 4.66a3.6 3.6 0 0 1 5.1.04A16.08 16.08 0 0 1 31.97 16a3.6 3.6 0 1 1-7.2 0c0-2.4-.98-4.61-2.58-6.24a3.6 3.6 0 0 1 .03-5.1Z" clipRule="evenodd" />
+        <path fill="url(#allure-c)" fillRule="evenodd" d="M12.4 3.6A3.6 3.6 0 0 1 16 0c4.4 0 8.4 1.8 11.29 4.66a3.6 3.6 0 0 1-5.06 5.13A8.87 8.87 0 0 0 16 7.2a3.6 3.6 0 0 1-3.6-3.6Z" clipRule="evenodd" />
+        <path fill="url(#allure-d)" fillRule="evenodd" d="M0 16A16 16 0 0 1 16 0a3.6 3.6 0 0 1 0 7.2 8.8 8.8 0 0 0-6.21 15.04 3.6 3.6 0 0 1-5.13 5.06A16.08 16.08 0 0 1 0 16Z" clipRule="evenodd" />
+        <path fill="url(#allure-e)" fillRule="evenodd" d="M4.66 22.24a3.6 3.6 0 0 1 5.1-.03 8.87 8.87 0 0 0 6.23 2.59 3.6 3.6 0 0 1 0 7.2c-4.4 0-8.4-1.8-11.3-4.66a3.6 3.6 0 0 1-.03-5.1Z" clipRule="evenodd" />
+        <path fill="url(#allure-f)" fillRule="evenodd" d="M28.38 12.4a3.6 3.6 0 0 1 3.6 3.6A16 16 0 0 1 16 32a3.6 3.6 0 0 1 0-7.2 8.8 8.8 0 0 0 8.8-8.8 3.6 3.6 0 0 1 3.6-3.6Z" clipRule="evenodd" />
+        <path fill="url(#allure-g)" fillRule="evenodd" d="M28.38 12.4a3.6 3.6 0 0 1 3.6 3.6v12.4a3.6 3.6 0 1 1-7.2 0V16a3.6 3.6 0 0 1 3.6-3.6Z" clipRule="evenodd" />
+        <g clipPath="url(#allure-h)">
+          <path fill="url(#allure-i)" fillRule="evenodd" d="M22.23 4.66a3.6 3.6 0 0 1 5.1.04A16.08 16.08 0 0 1 31.97 16a3.6 3.6 0 1 1-7.2 0c0-2.4-.98-4.61-2.58-6.24a3.6 3.6 0 0 1 .03-5.1Z" clipRule="evenodd" />
+        </g>
+      </g>
+      <defs>
+        <linearGradient id="allure-b" x1="26.4" x2="28.8" y1="9.6" y2="15.01" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#7E22CE" /><stop offset="1" stopColor="#8B5CF6" />
+        </linearGradient>
+        <linearGradient id="allure-c" x1="26.8" x2="17.8" y1="9.4" y2="3.61" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#EF4444" /><stop offset="1" stopColor="#DC2626" />
+        </linearGradient>
+        <linearGradient id="allure-d" x1="3.6" x2="5.4" y1="14.01" y2="24.81" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#22C55E" /><stop offset="1" stopColor="#15803D" />
+        </linearGradient>
+        <linearGradient id="allure-e" x1="4.8" x2="14.4" y1="22.21" y2="29.21" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#94A3B8" /><stop offset=".96" stopColor="#64748B" /><stop offset="1" stopColor="#64748B" />
+        </linearGradient>
+        <linearGradient id="allure-f" x1="28.4" x2="22.19" y1="22.18" y2="28.4" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#D97706" /><stop offset="1" stopColor="#FBBF24" />
+        </linearGradient>
+        <linearGradient id="allure-g" x1="29.2" x2="30.63" y1="54.43" y2="54.28" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#FBBF24" /><stop offset="1" stopColor="#FBBF24" />
+        </linearGradient>
+        <linearGradient id="allure-i" x1="26.4" x2="28.8" y1="9.6" y2="15.01" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#7E22CE" /><stop offset="1" stopColor="#8B5CF6" />
+        </linearGradient>
+        <clipPath id="allure-a"><path fill="#fff" d="M0 0h32v32H0z" /></clipPath>
+        <clipPath id="allure-h"><path fill="#fff" d="M24.8 12H32v8h-7.2z" /></clipPath>
+      </defs>
     </svg>
   )
 }
 
 const TECH_ICONS = {
+  'TypeScript':      { icon: SiTypescript,    color: '#3178C6' },
   'GitHub':          { icon: SiGithub,        color: '#ffffff' },
   'Git':             { icon: SiGit,            color: '#F05032' },
   'Azure DevOps':    { icon: VscAzureDevops,   color: '#0078D7' },
-  'Jenkins':         { icon: SiJenkins,        color: '#D24939' },
   'Docker':          { icon: SiDocker,         color: '#2496ED' },
   'Vercel':          { icon: SiVercel,         color: '#ffffff' },
   'Linux':           { icon: SiLinux,          color: '#FCC624' },
@@ -74,12 +108,12 @@ function TechIcon({ name, catColor }) {
     <div className="tool-pill flex flex-col items-center gap-2"
       style={{ '--glow-color': `${color}40` }}>
       {entry?.icon
-        ? <entry.icon size={28} style={{ color }} />
+        ? <entry.icon size={36} style={{ color }} />
         : (
           <div style={{
-            width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: 36, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center',
             borderRadius: 6, background: `${color}20`, border: `1px solid ${color}40`,
-            color, fontSize: abbr.length > 2 ? 9 : 11, fontFamily: 'monospace', fontWeight: 'bold',
+            color, fontSize: abbr.length > 2 ? 10 : 13, fontFamily: 'monospace', fontWeight: 'bold',
           }}>{abbr}</div>
         )
       }
@@ -191,21 +225,16 @@ export default function Skills() {
         </div>
 
         {/* ── Tech icon grid ── */}
-        <div className="glass rounded-xl p-6 md:p-8 space-y-8">
-          {technologies.map((cat, ci) => (
-            <div key={cat.category}>
-              {ci > 0 && <div className="border-t mb-8" style={{ borderColor: 'rgba(51,65,85,0.4)' }} />}
-              <div className="text-xs font-mono font-semibold uppercase tracking-widest mb-5"
-                style={{ color: cat.border }}>
-                {cat.category}
-              </div>
-              <div className="flex flex-wrap gap-x-6 gap-y-4">
+        <div className="glass rounded-xl p-6 md:p-8">
+          <div className="flex flex-wrap items-start justify-center gap-x-8 gap-y-8">
+            {technologies.map((cat) => (
+              <Fragment key={cat.category}>
                 {cat.items.map(item => (
                   <TechIcon key={item} name={item} catColor="#94a3b8" />
                 ))}
-              </div>
-            </div>
-          ))}
+              </Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </section>
