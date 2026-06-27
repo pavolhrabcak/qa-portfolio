@@ -25,7 +25,7 @@ function FeaturedCard({ exp, visible }) {
           className="text-xs font-mono font-bold px-3 py-1 rounded-full uppercase tracking-widest"
           style={{ color: '#10b981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)' }}
         >
-          ★ Current Role
+          ★ <span className="star-badge-text">Current Role</span>
         </span>
         <span
           className="text-xs font-mono px-3 py-1 rounded-full"

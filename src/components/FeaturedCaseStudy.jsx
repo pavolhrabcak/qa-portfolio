@@ -122,7 +122,7 @@ function TabContent({ id, visible }) {
       <div className="rounded-xl px-6 py-5"
         style={{ background: 'rgba(34,211,238,0.05)', border: '1px solid rgba(34,211,238,0.2)' }}>
         <div className="flex items-center gap-2 mb-4">
-          <span style={{ color: '#22d3ee', position: 'relative', top: '-1px' }} className="text-sm">★</span>
+          <span className="star-impact text-sm" style={{ color: '#22d3ee' }}>★</span>
           <div className="text-xs font-mono font-bold uppercase tracking-widest" style={{ color: '#22d3ee' }}>Business Impact</div>
         </div>
         <ul className="space-y-4">
@@ -220,7 +220,7 @@ export default function FeaturedCaseStudy() {
         <div className="flex items-center gap-4 mb-6">
           <span className="text-xs font-mono font-bold px-3 py-1 rounded-full uppercase tracking-widest"
             style={{ color: '#fbbf24', background: 'rgba(251,191,36,0.1)', border: '1px solid rgba(251,191,36,0.25)' }}>
-            ★ Featured Case Study
+            ★ <span className="star-badge-text">Featured Case Study</span>
           </span>
           <div className="flex-1 h-px" style={{ background: 'rgba(51,65,85,0.8)' }} />
         </div>
