@@ -3,7 +3,7 @@ import Particles, { ParticlesProvider, useParticlesProvider } from '@tsparticles
 import { loadSlim } from '@tsparticles/slim'
 
 const options = {
-  fpsLimit: 60,
+  fpsLimit: 30,
   interactivity: {
     events: {
       onHover: { enable: true, mode: 'grab' },
@@ -13,7 +13,7 @@ const options = {
     },
   },
   particles: {
-    number: { value: 60, density: { enable: true } },
+    number: { value: 35, density: { enable: true } },
     color: { value: '#10b981' },
     links: {
       enable: true,
@@ -31,7 +31,7 @@ const options = {
     shape: { type: 'circle' },
     size: { value: { min: 1.5, max: 3 } },
   },
-  detectRetina: true,
+  detectRetina: false,
 }
 
 function ParticlesCanvas() {
