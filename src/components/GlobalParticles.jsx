@@ -6,10 +6,7 @@ const options = {
   fpsLimit: 30,
   interactivity: {
     events: {
-      onHover: { enable: true, mode: 'grab' },
-    },
-    modes: {
-      grab: { distance: 140, links: { opacity: 0.35 } },
+      onHover: { enable: false },
     },
   },
   particles: {

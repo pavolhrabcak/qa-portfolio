@@ -290,7 +290,7 @@ export default function FeaturedCaseStudy() {
                       borderRight: '1px solid var(--border-subtle)',
                     }}
                   >
-                    <span style={{ color: tab.color, fontSize: '8px' }}>■</span>
+                    <span style={{ color: tab.color, fontSize: '8px', lineHeight: 1 }}>■</span>
                     {tab.label}
                   </button>
                 ))}
