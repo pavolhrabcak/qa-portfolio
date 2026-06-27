@@ -63,7 +63,7 @@ function TabContent({ id, visible }) {
       <ul className="space-y-2">
         {caseStudy.approach.map((item, i) => (
           <li key={i} className="flex gap-2 text-slate-400 text-base leading-relaxed">
-            <span className="text-indigo-400 shrink-0 mt-0.5">→</span>
+            <span className="text-indigo-400 shrink-0">→</span>
             <span>{item}</span>
           </li>
         ))}
