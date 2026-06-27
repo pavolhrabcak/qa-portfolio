@@ -331,7 +331,8 @@ export default function Contact() {
           <a href={`mailto:${personalInfo.email}`} className="text-emerald-400 hover:underline">{personalInfo.email}</a>
           {' · '}
           <a href={`https://${personalInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-400 transition-colors">LinkedIn</a>
-          {' · '}
+        </p>
+        <p className="text-center text-xs font-mono mt-3">
           <button onClick={() => setShowTraining(true)} className="text-slate-400 hover:text-emerald-400 transition-colors">
             Trainings & Certifications →
           </button>
