@@ -291,8 +291,7 @@ export default function FeaturedCaseStudy() {
                     }}
                   >
                     <span style={{ color: tab.color, fontSize: '8px' }}>■</span>
-                    <span className="sm:hidden">{tab.short}</span>
-                    <span className="hidden sm:inline">{tab.label}</span>
+                    {tab.label}
                   </button>
                 ))}
               </div>
