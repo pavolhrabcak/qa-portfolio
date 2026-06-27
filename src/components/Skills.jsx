@@ -6,7 +6,14 @@ import {
 } from 'react-icons/si'
 import { VscAzureDevops, VscTerminal, VscVscode } from 'react-icons/vsc'
 import { FaMasksTheater, FaRobot, FaListCheck, FaWandMagicSparkles, FaServer } from 'react-icons/fa6'
-import { VscGraph } from 'react-icons/vsc'
+function AllureLogo({ size = 28 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 6 L94 88 H72 L50 44 L28 88 H6 Z" fill="#E8394D" />
+      <path d="M50 44 L28 88 H72 Z" fill="rgba(0,0,0,0.25)" />
+    </svg>
+  )
+}
 
 const TECH_ICONS = {
   'GitHub':          { icon: SiGithub,        color: '#ffffff' },
@@ -24,7 +31,7 @@ const TECH_ICONS = {
   'Confluence':      { icon: SiConfluence,     color: '#0052CC' },
   'Playwright HTML Report': { icon: FaMasksTheater, color: '#2EAD33' },
   'TestLink':    { icon: FaListCheck,         color: '#94a3b8' },
-  'Allure Report': { icon: VscGraph,          color: '#f97316' },
+  'Allure Report': { icon: AllureLogo,        color: '#E8394D' },
   'Codex':       { icon: FaWandMagicSparkles, color: '#a78bfa' },
   'MCP Server':  { icon: FaServer,            color: '#94a3b8' },
 }
