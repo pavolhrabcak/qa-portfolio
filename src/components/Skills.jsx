@@ -2,7 +2,7 @@
 import { skills, technologies } from '../data'
 import {
   SiGithub, SiGithubactions, SiJenkins, SiDocker, SiVercel, SiLinux,
-  SiJira, SiGithubcopilot, SiConfluence,
+  SiJira, SiGithubcopilot, SiConfluence, SiOpenai,
 } from 'react-icons/si'
 import { VscAzureDevops, VscTerminal, VscVscode } from 'react-icons/vsc'
 import { FaMasksTheater, FaRobot, FaListCheck, FaWandMagicSparkles, FaServer } from 'react-icons/fa6'
@@ -32,7 +32,7 @@ const TECH_ICONS = {
   'Playwright HTML Report': { icon: FaMasksTheater, color: '#2EAD33' },
   'TestLink':    { icon: FaListCheck,         color: '#94a3b8' },
   'Allure Report': { icon: AllureLogo,        color: '#E8394D' },
-  'Codex':       { icon: FaWandMagicSparkles, color: '#a78bfa' },
+  'Codex':       { icon: SiOpenai,            color: '#ffffff' },
   'MCP Server':  { icon: FaServer,            color: '#94a3b8' },
 }
 
