@@ -119,11 +119,6 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li>
-              <a href="#contact" onClick={() => setOpen(false)} className="text-emerald-400 font-medium">
-                Hire Me
-              </a>
-            </li>
           </ul>
         </div>
       )}
