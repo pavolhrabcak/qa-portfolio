@@ -34,13 +34,13 @@ export default function Navbar() {
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={scrolled ? {
-        background: 'var(--nav-bg)',
-        backdropFilter: 'blur(14px)',
-        WebkitBackdropFilter: 'blur(14px)',
-        borderBottom: '1px solid var(--nav-border)',
-        padding: '12px 0',
-      } : { padding: '20px 0' }}
+      style={{
+        background: scrolled ? 'var(--nav-bg)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(14px)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(14px)' : 'none',
+        borderBottom: scrolled ? '1px solid var(--nav-border)' : '1px solid transparent',
+        padding: scrolled ? '12px 0' : '20px 0',
+      }}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}

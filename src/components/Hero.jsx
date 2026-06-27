@@ -120,7 +120,7 @@ function MetricsWidget() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
       {/* Ambient orbs */}
       <div className="orb absolute top-1/4 left-1/4 rounded-full"
         style={{ width: 'min(500px, 80vw)', height: 'min(500px, 80vw)', background: 'radial-gradient(circle, rgba(16,185,129,0.12) 0%, transparent 70%)' }} />
