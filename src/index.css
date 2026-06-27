@@ -170,6 +170,10 @@ section {
   50%       { background-position: 100% 50%; }
 }
 
+/* ── Tab color indicator alignment ───────────────────────── */
+.tab-dot { position: relative; top: 0; }
+@media (min-width: 640px) { .tab-dot { top: 2px; } }
+
 /* ── Tool icon pills ──────────────────────────────────────── */
 .tool-pill {
   transition: transform 0.22s ease, filter 0.22s ease;

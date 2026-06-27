@@ -290,7 +290,7 @@ export default function FeaturedCaseStudy() {
                       borderRight: '1px solid var(--border-subtle)',
                     }}
                   >
-                    <span style={{ display: 'block', width: '8px', height: '8px', background: tab.color, borderRadius: '1px', flexShrink: 0, position: 'relative', top: '2px', marginRight: '4px' }} />
+                    <span className="tab-dot" style={{ display: 'block', width: '8px', height: '8px', background: tab.color, borderRadius: '1px', flexShrink: 0, marginRight: '4px' }} />
                     {tab.label}
                   </button>
                 ))}
