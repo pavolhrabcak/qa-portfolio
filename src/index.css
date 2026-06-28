@@ -200,3 +200,13 @@ section {
   border-color: var(--card-hover-border);
   box-shadow: var(--card-hover-shadow);
 }
+
+/* ── Project cards: permanent indigo glow ──────────────────── */
+.project-card {
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  box-shadow: 0 0 28px rgba(129, 140, 248, 0.1), 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+.project-card.card-hover:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: var(--card-hover-shadow);
+}

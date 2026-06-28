@@ -15,10 +15,9 @@ function ProjectCard({ project, index, visible }) {
 
   return (
     <div
-      className="card-hover rounded-2xl overflow-hidden flex flex-col"
+      className="project-card card-hover rounded-2xl overflow-hidden flex flex-col"
       style={{
         background: 'var(--surface-dark)',
-        border: '1px solid rgba(129,140,248,0.2)',
         opacity: visible ? 0.9 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(24px)',
         transition: `opacity 0.4s ease ${index * 150}ms, transform 0.4s ease ${index * 150}ms`,
