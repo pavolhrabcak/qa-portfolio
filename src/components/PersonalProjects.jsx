@@ -19,7 +19,6 @@ function ProjectCard({ project, index, visible }) {
       style={{
         background: 'var(--surface-dark)',
         border: '1px solid rgba(129,140,248,0.2)',
-        boxShadow: '0 0 32px rgba(129,140,248,0.07), 0 4px 20px rgba(0,0,0,0.3)',
         opacity: visible ? 0.9 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(24px)',
         transition: `opacity 0.4s ease ${index * 150}ms, transform 0.4s ease ${index * 150}ms`,

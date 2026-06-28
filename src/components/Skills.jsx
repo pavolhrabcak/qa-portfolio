@@ -226,7 +226,7 @@ export default function Skills() {
 
         {/* ── Tech icon grid ── */}
         <div className="glass rounded-xl p-6 md:p-8">
-          <div className="grid grid-cols-4 justify-items-center gap-x-4 gap-y-6 sm:flex sm:flex-wrap sm:items-start sm:justify-center sm:gap-x-6 sm:gap-y-8">
+          <div className="grid grid-cols-4 justify-items-center gap-x-4 gap-y-6 sm:flex sm:flex-wrap sm:items-start sm:justify-evenly sm:gap-x-6 sm:gap-y-8">
             {(() => {
               const allItems = technologies.flatMap(cat => cat.items)
               const lastRowCount = allItems.length % 4
