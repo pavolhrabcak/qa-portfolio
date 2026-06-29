@@ -285,7 +285,7 @@ export const projects = [
     title: 'Machins SK',
     subtitle: 'British Stamps Collectors Guide',
     description: 'Comprehensive Slovak-language collectors guide for British Machin definitive stamps — the result of several years of personal philatelic study and research. Covers the full history, variants, and identifying characteristics of this iconic Queen Elizabeth II stamp series.',
-    url: 'https://machins-sk.vercel.app/',
+    url: 'https://www.filatelia-machins.com/',
     status: 'Live',
     roles: ['Product Owner', 'QA', 'AI-Assisted Dev', 'Content Creator'],
     features: [
