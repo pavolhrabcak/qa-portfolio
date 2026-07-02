@@ -13,6 +13,7 @@ import ScrollToTop from './components/ScrollToTop'
 import ScrollNav from './components/ScrollNav'
 import GlobalParticles from './components/GlobalParticles'
 import CVPage from './pages/CVPage'
+import { Analytics } from '@vercel/analytics/react'
 
 function Portfolio() {
   return (
@@ -36,9 +37,12 @@ function Portfolio() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Portfolio />} />
-      <Route path="/cv" element={<CVPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/cv" element={<CVPage />} />
+      </Routes>
+      <Analytics />
+    </>
   )
 }
