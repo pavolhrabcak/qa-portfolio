@@ -269,7 +269,7 @@ export const projects = [
     title: 'Ľudovky z Východu',
     subtitle: 'Folk Songs Database',
     description: 'Bilingual digital archive of 400+ folk songs from Eastern Slovakia. Built on 2 years of personal content work — collecting songs, creating music sheets, and recording MP3 samples — combined with a full-featured web platform for preserving and sharing regional musical heritage.',
-    url: 'https://ludovky-z-vychodu.vercel.app/',
+    url: 'https://www.ludovkyzvychodu.com/',
     status: 'Invite Only',
     roles: ['Product Owner', 'QA', 'AI-Assisted Dev', 'Content Creator'],
     features: [
